@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-29743.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>javaScript中Number数字类型方法入门_在线工具</title>
+        <meta name="description" content="前言 Number和Math都属于JavaScript中的内置对象，Number数字类型作为基础数据类型，我们在开发过程中会经常用到，包括数字精度的格式化，还有字符串转换成数字等操作。 Number数" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                        <li><a href="#">关于</a></li>
+                    <li><a href="#">联系</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>javaScript中Number数字类型方法入门_在线工具</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<h3 id="前言"><strong>前言</strong></h3> <p>Number和Math都属于JavaScript中的内置对象，Number数字类型作为基础数据类型，我们在开发过程中会经常用到，包括数字精度的格式化，还有字符串转换成数字等操作。</p> <h2 id="number数字"><strong>Number数字</strong></h2> <h4 id="自带属性值"><strong>自带属性值</strong></h4> <pre><code> Number.EPSILON 两个可表示(representable)数之间的最小间隔。  Number.MAX_SAFE_INTEGER JavaScript 中最大的安全整数 (2^53 - 1)。  Number.MAX_VALUE 能表示的最大正数。最小的负数是 -MAX_VALUE。  Number.MIN_SAFE_INTEGER JavaScript 中最小的安全整数 (-(2^53 - 1)).  Number.MIN_VALUE 能表示的最小正数即最接近 0 的正数 (实际上不会变成 0)。最大的负数是 -MIN_VALUE。   Number.NaN 特殊的“非数字”值。   Number.NEGATIVE_INFINITY 特殊的负无穷大值，在溢出时返回该值。  Number.POSITIVE_INFINITY 特殊的正无穷大值，在溢出时返回该值。  </code></pre> <h4 id="基础使用"><strong>基础使用</strong></h4> <p>new Number实例化数字对象和Number强转数字字符串，两个值的并不相等</p> <pre><code>var value1 = new Number("123"); this.value1 = value1; console.log(`value1 === 123 is ${value1 === 123}`); // value1 === 123 is false  var value2 = Number("123"); this.value2 = value2; console.log(`value2 === 123 is ${value2 === 123}`); // value2 === 123 is true     // 判断Number类型 console.log(value1 instanceof Number); console.log(value2 instanceof Number);  </code></pre> <h5 id="number将转换字符串为数字"><strong>Number将转换字符串为数字</strong></h5> <pre><code> Number("123"); // 123 Number("12.3"); // 12.3 Number("12.00"); // 12 Number("123e-1"); // 12.3 Number(""); // 0 Number(null); // 0 Number("0x11"); // 17 Number("0b11"); // 3 Number("0o11"); // 9 Number("foo"); // NaN Number("100a"); // NaN Number("-Infinity"); //-Infinity  </code></pre> <h5 id="number判断数字是否是nan"><strong>Number判断数字是否是NAN</strong></h5> <pre><code> let number1 = new Number("123"); let number2 = 123; let number3 = "string"; let number4 = null; console.log(Number.isNaN(number1)); //  false console.log(Number.isNaN(number2)); //  false console.log(Number.isNaN(number3)); //  false console.log(Number.isNaN(number4)); //  false console.log(Number.isNaN(NaN)); //  true  </code></pre> <h5 id="numberisfinite-是否是一个有穷数"><strong>Number.isFinite 是否是一个有穷数</strong></h5> <pre><code>console.log(Number.isFinite(1 / 0)); // false console.log(Number.isFinite(10 / 5)); // true console.log(Number.isFinite(0 / 0)); // false  </code></pre> <h5 id="numberisinteger-判断给定的参数是否为整数"><strong>Number.isInteger 判断给定的参数是否为整数</strong></h5> <pre><code> function checkInteger(x, y) {   if (Number.isInteger(y / x)) {     return "整数";   }   return "非整数"; } console.log(checkInteger(5, 10)); // "整数" console.log(checkInteger(5, 11)); // "非整数"  </code></pre> <h5 id="numberissafeinteger-判断传入的参数值是否是一个安全整数safe-integer"><strong>Number.isSafeInteger 判断传入的参数值是否是一个“安全整数”（safe integer）</strong></h5> <p><strong>备注：</strong></p> <p>Number.isSafeInteger() 方法用来判断传入的参数值是否是一个“安全整数”（safe integer）。<br /> 一个安全整数是一个符合下面条件的整数：<br /> 可以准确地表示为一个IEEE-754双精度数字,<br /> 其IEEE-754表示不能是舍入任何其他整数以适应IEEE-754表示的结果。.<br /> 比如，2^53 - 1 是一个安全整数，它能被精确表示，在任何 IEEE-754 舍入模式（rounding mode）下，没有其他整数舍入结果为该整数。作为对比，2^53 就不是一个安全整数，它* 能够使用 IEEE-754 表示，但是 2^53 + 1 不能使用 IEEE-754 直接表示，在就近舍入（round-to-nearest）和向零舍入中，会被舍入为 2^53。<br /> 安全整数范围为 -(2^53 - 1)到 2^53 - 1 之间的整数，包含 -(2^53 - 1)和 2^53 - 1。</p> <pre><code>Number.isSafeInteger(3); // true Number.isSafeInteger(Math.pow(2, 53)); // false Number.isSafeInteger(Math.pow(2, 53) - 1); // true Number.isSafeInteger(NaN); // false Number.isSafeInteger(Infinity); // false Number.isSafeInteger("3"); // false Number.isSafeInteger(3.1); // false Number.isSafeInteger(3.0); // true  </code></pre> <h5 id="numberparsefloat-将字符串数字转成数字类型"><strong>Number.parseFloat 将字符串数字转成数字类型</strong></h5> <p><strong>备注：</strong></p> <ul> <li>方法可以把一个字符串解析成浮点数。该方法与全局的 parseFloat() 函数相同，并且处于 ECMAScript 6 规范中（用于全局变量的模块化）。</li> <li>给定值被解析成浮点数，如果无法被解析成浮点数，则返回NaN</li> </ul> <pre><code> function checkFloat(r) {   return parseFloat(r); } console.log(checkFloat(4.567)); // 4.567 console.log(checkFloat("4.567abcdefgh")); // 4.567 console.log(checkFloat("abcdefgh")); // NaN   </code></pre> <h5 id="numberparseint-将数字字符串转成整数"><strong>Number.parseInt 将数字字符串转成整数</strong></h5> <pre><code>/**  *  * Number.parseInt()  * 方法依据指定基数 [ 参数 radix 的值]，把字符串 [ 参数 string 的值] 解析成整数。  * @params string：要解析的值。 如果此参数不是字符串，则使用ToString抽象操作将其转换为字符串。忽略此参数中的前导空格。  * @params radix：一个介于2到36之间的整数，代表字符串的基数(数学数字系统中的基)。小心-这并不是默认为10。  * 从给定字符串中解析的整数。如果基数小于11，且第一个非空白字符不能转换为数字，则返回NaN。  *  * */   function checkInt(x, base) {   const parsed = parseInt(x, base);   if (isNaN(parsed)) {     return 0;   }   return parsed * 100; } console.log(checkInt(" 0xF", 16)); // 1500 console.log(checkInt("321", 2)); // 0  </code></pre> <h5 id="numberprototypetofixed-把数字转换为字符串返回小数点后有指定位数的数字"><strong>Number.prototype.toFixed() 把数字转换为字符串，返回小数点后有指定位数的数字</strong></h5> <pre><code> var numObj = 5.123456; var n = numObj.toFixed(2); // 5.12   </code></pre> <h5 id="numberprototypetoprecision-以指定的精度返回该数值对象的字符串表示"><strong>Number.prototype.toPrecision() 以指定的精度返回该数值对象的字符串表示</strong></h5> <pre><code> var numObj = 5.123456; console.log("numObj.toPrecision()  is " + numObj.toPrecision()); // 输出 5.123456 console.log("numObj.toPrecision(5) is " + numObj.toPrecision(5)); // 输出 5.1235 console.log("numObj.toPrecision(2) is " + numObj.toPrecision(2)); // 输出 5.1 console.log("numObj.toPrecision(1) is " + numObj.toPrecision(1)); // 输出 5 // 注意：在某些情况下会以指数表示法返回 console.log((1234.5).toPrecision(2)); // "1.2e+3"  </code></pre> <h5 id="number-转换-date-对象"><strong>Number 转换 Date 对象</strong></h5> <pre><code> var d = new Date("December 17, 1995 03:24:00"); console.log(Number(d));  </code></pre> <h4 id="结尾"><strong>结尾</strong></h4> <p>在Number数字类型中，使用最多的应该是：</p> <ul> <li>isNaN判断数字是否是非数字NAN</li> <li>parseFloat将数字字符串转成数字类型</li> <li>parseInt 解析字符串转成整数</li> <li>toPrecision作为数字的方法，返回该数值的指定精度，包含小数位</li> <li>toFixed 返回指定小数点精度的数字，需要注意和toPrecision区分开来</li> </ul> <h4 id="源码地址">源码地址</h4> <ul> <li> <h5 id="码云-httpsgiteecomlewyonvue-note"> <strong>码云</strong> <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://gitee.com/lewyon/vue-note"  target="_blank"  rel="nofollow">https://gitee.com/lewyon/vue-note</a><br /> </h5> </li> <li> <h5 id="githup-httpsgithubcomakari16vue-note"> <strong>githup</strong> <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/akari16/vue-note"  target="_blank"  rel="nofollow">https://github.com/akari16/vue-note</a><br /> </h5> </li> </ul> <p>文章个人博客地址：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://lewyon.xyz/numberFun.html"  target="_blank"  rel="nofollow">javaScript中Number数字类型基本方法入门</a></p> <p>欢迎关注公众号：程序猿布欧，不定期更新一些前端入门文章</p> <p>创作不易，转载请注明出处和作者。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-29660.htm">动物疫苗厂家招聘电话 动物疫苗厂家招聘电话是多少</a></p>
+                                        <p>下一个：<a href="/news/article-29744.htm">长春宠物医院收费价目表查询（长春 宠物医院）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-29743.htm" title="javaScript中Number数字类型方法入门_在线工具">javaScript中Number数字类型方法入门_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-23-node-share.htm" title="12月23日→22.9M/S|2024年最新免费节点V2rayU Node订阅链接地址">12月23日→22.9M/S|2024年最新免费节点V2rayU Node订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-29744.htm" title="长春宠物医院收费价目表查询（长春 宠物医院）">长春宠物医院收费价目表查询（长春 宠物医院）</a></li>
+                        <li class="py-2"><a href="/news/article-29659.htm" title="Android中EditText光标的显示与隐藏方法">Android中EditText光标的显示与隐藏方法</a></li>
+                        <li class="py-2"><a href="/news/article-29660.htm" title="动物疫苗厂家招聘电话 动物疫苗厂家招聘电话是多少">动物疫苗厂家招聘电话 动物疫苗厂家招聘电话是多少</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-22-free-high-speed-nodes.htm" title="12月22日→18.6M/S|2024年最新免费节点V2rayU Node订阅链接地址">12月22日→18.6M/S|2024年最新免费节点V2rayU Node订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
