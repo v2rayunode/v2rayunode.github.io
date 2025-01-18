@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-42328.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vue3中获取ref元素的几种方式</title>
+        <meta name="description" content="1. 原生js获取dom元素： document.querySelector(选择器) document.getElementById(id选择器) document.getElementsByCla" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-42328.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="vue3中获取ref元素的几种方式" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/410b34121b845fee70063f582f79928f.webp" />
+        <meta property="og:release_date" content="2025-01-18T07:13:59" />
+    <meta property="og:updated_time" content="2025-01-18T07:13:59" />
+        <meta property="og:description" content="1. 原生js获取dom元素： document.querySelector(选择器) document.getElementById(id选择器) document.getElementsByCla" />
+        
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                        <li><a href="#">关于</a></li>
+                    <li><a href="#">联系</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>vue3中获取ref元素的几种方式</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <h3> <a id="1_jsdom_0" rel="nofollow"></a>1. 原生js获取dom元素：</h3> <pre><code class="prism language-js">document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span>选择器<span class="token punctuation">)</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>id选择器<span class="token punctuation">)</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token keyword">class</span>选择器<span class="token punctuation">)</span> </code></pre> <h3> <a id="2_refdom_6" rel="nofollow"></a>2. ref获取单个dom元素：</h3> <pre><code class="prism language-js"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>    <span class="token operator">&lt;</span>div ref<span class="token operator">=</span><span class="token string">'divDom'</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span> <span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span> ref<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span> <span class="token keyword">const</span> divDom <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">onMounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'获取dom元素'</span><span class="token punctuation">,</span>divDom<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> </code></pre> <h3> <a id="3_refvfordom_18" rel="nofollow"></a>3. ref获取v-for循环中的dom元素：</h3> <pre><code class="prism language-js"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>    <span class="token operator">&lt;</span>div ref<span class="token operator">=</span><span class="token string">'getDivDom'</span> v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"item in list"</span> <span class="token operator">:</span>data<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">"item.id"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span> <span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span> ref<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span> <span class="token keyword">const</span> divDomList <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token keyword">const</span> <span class="token function-variable function">getDivDom</span> <span class="token operator">=</span> <span class="token parameter">el</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>     <span class="token keyword">if</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         divDomList<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>el<span class="token punctuation">.</span>dataset<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>el<span class="token punctuation">)</span>      <span class="token punctuation">}</span> <span class="token punctuation">}</span>  <span class="token comment">// const el =divDomList.get(id) // 根据list数据中的id值 获取对应的dom元素 </span> </code></pre> <h3> <a id="4_swiperswiperdom_35" rel="nofollow"></a>4. 在swiper中获取swiper的dom元素：</h3> <pre><code class="prism language-js"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>    <span class="token operator">&lt;</span>swiper @swiper<span class="token operator">=</span><span class="token string">'getSwiper'</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>swiper <span class="token operator">&gt;</span>  <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span> <span class="token keyword">import</span> swiper <span class="token keyword">from</span> <span class="token string">'swiper'</span> <span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span> ref<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span> <span class="token keyword">const</span> swiperDom<span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token keyword">const</span> <span class="token function-variable function">getSwiper</span><span class="token operator">=</span> <span class="token parameter">el</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>     swiperDom<span class="token punctuation">.</span>value <span class="token operator">=</span> el<span class="token punctuation">;</span> <span class="token punctuation">}</span> </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-41822.htm">宠物狗粮配方大全（宠物狗粮价格大全）</a></p>
+                                        <p>下一个：<a href="/news/article-42329.htm">vs code编写web项目</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-31146.htm" title="想寄猫怎么寄（想寄猫怎么寄快递）">想寄猫怎么寄（想寄猫怎么寄快递）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-27-free-subscribe-node.htm" title="12月27日→22.3M/S|2024年最新免费节点V2rayU Node订阅链接地址">12月27日→22.3M/S|2024年最新免费节点V2rayU Node订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-40342.htm" title="广州宠物狗救助站电话多少（广州狗狗救助中心电话）">广州宠物狗救助站电话多少（广州狗狗救助中心电话）</a></li>
+                        <li class="py-2"><a href="/news/article-35847.htm" title="宠物粮在哪里买便宜又安全的（宠物粮在哪个网站买）">宠物粮在哪里买便宜又安全的（宠物粮在哪个网站买）</a></li>
+                        <li class="py-2"><a href="/news/article-37866.htm" title="猫粮品牌大全图片及名称（猫粮品牌排行榜及名称）">猫粮品牌大全图片及名称（猫粮品牌排行榜及名称）</a></li>
+                        <li class="py-2"><a href="/news/article-34019.htm" title="聊城宠物吧（聊城宠物店电话）">聊城宠物吧（聊城宠物店电话）</a></li>
+                        <li class="py-2"><a href="/news/article-41321.htm" title="宠物粮食市场报告分析（宠物粮食市场前景）">宠物粮食市场报告分析（宠物粮食市场前景）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-3-node-share-links.htm" title="1月3日→19.7M/S|2025年最新免费节点V2rayU Node订阅链接地址">1月3日→19.7M/S|2025年最新免费节点V2rayU Node订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-30-free-node-subscribe.htm" title="12月30日→20.7M/S|2024年最新免费节点V2rayU Node订阅链接地址">12月30日→20.7M/S|2024年最新免费节点V2rayU Node订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-36899.htm" title="广州宠物救助领养中心电话号码是多少（广州宠物救助领养中心地址）">广州宠物救助领养中心电话号码是多少（广州宠物救助领养中心地址）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">54</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
