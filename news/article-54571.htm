@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-54571.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vue3知识点整理 常用Composition API（3）- 生命周期、自定义hook、toRef</title>
+        <meta name="description" content="一、生命周期  Vue2.x生命周期相关：Vue知识点整理（一）- Vue核心（6）- 生命周期（重要） Vue2官方文档 - 生命周期钩子  1.1 Vue3 生命周期图示 官方Vue3生命周期图示" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-54571.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="Vue3知识点整理 常用Composition API（3）- 生命周期、自定义hook、toRef" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/a621dbd095b5853e39cd840d5e02d439.webp" />
+        <meta property="og:release_date" content="2025-02-11T05:42:07" />
+    <meta property="og:updated_time" content="2025-02-11T05:42:07" />
+        <meta property="og:description" content="一、生命周期  Vue2.x生命周期相关：Vue知识点整理（一）- Vue核心（6）- 生命周期（重要） Vue2官方文档 - 生命周期钩子  1.1 Vue3 生命周期图示 官方Vue3生命周期图示" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Vue3知识点整理 常用Composition API（3）- 生命周期、自定义hook、toRef">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>Vue3知识点整理 常用Composition API（3）- 生命周期、自定义hook、toRef</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p id="main-toc"><span style="font-size: 2em;">一、生命周期</span></p> <blockquote> <p>Vue2.x生命周期相关：<a class="link-info" href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/JHY97/article/details/124137199"  title="Vue知识点整理（一）- Vue核心（6）- 生命周期（重要）" rel="nofollow">Vue知识点整理（一）- Vue核心（6）- 生命周期（重要）</a></p> <p><a class="link-info" href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://cn.vuejs.org/v2/api/#%E9%80%89%E9%A1%B9-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90"  title="Vue2官方文档 - 生命周期钩子" rel="nofollow">Vue2官方文档 - 生命周期钩子</a></p> </blockquote> <h2 id="1.1%20Vue3%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA">1.1 Vue3 生命周期图示</h2> <p>官方Vue3生命周期图示</p> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220606/78f6ca6fd68b35cae79dbd006cfd167d.jpg"></p> <h2 id="1.2%C2%A0Vue3.0%E4%B8%AD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90">1.2&nbsp;Vue3.0中生命周期钩子</h2> <p>Vue3.0中可以继续使用Vue2.x中的生命周期钩子，但有有两个被更名：</p> <ul> <li>beforeDestroy 改名为 beforeUnmount</li> <li>destroyed 改名为 unmounted</li> </ul> <p><strong>简单案例练习</strong></p> <ul> <li>创建一个组件Demo.vue，并定义一个sum属性，添加点击事件更新sum的内容</li> <li>Demo.vue 内添加生命周期钩子，并在控制台输出</li> <li>App.vue中引入Demo组件，并使用<span style="background-color:#d7d8d9;">v-if API</span> 和 添加点击事件控制 Demo组件 显示和隐藏</li> </ul> <p>效果展示</p> <p class="img-center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220606/87c45058913c53e352e01c4ff8d53800.jpg"></p> <p>相关代码：</p> <blockquote> <p><strong>Demo.vue</strong></p> <pre><code>&lt;template&gt;   &lt;h2&gt;当前求和为：{<!-- -->{ sum }}&lt;/h2&gt;   &lt;button @click="sum++"&gt;点击+1&lt;/button&gt; &lt;/template&gt;  &lt;script&gt; import { ref } from "vue"; export default {   name: "Demo",   setup() {     console.log("-----setup-----");     // 数据     let sum = ref(0);      return {       sum,     };   },   beforeCreate() {     console.log("-----beforeCreate-----");   },   created() {     console.log("-----created-----");   },   beforeMount() {     console.log("-----beforeMount-----");   },   mounted() {     console.log("-----mounted-----");   },   beforeUpdate() {     console.log("-----beforeUpdate-----");   },   updated() {     console.log("-----updated-----");   },   beforeUnmount() {     console.log("-----beforeUnmount-----");   },   unmounted() {     console.log("-----unmounted-----");   }, }; &lt;/script&gt;  &lt;style&gt;&lt;/style&gt;</code></pre> </blockquote> <blockquote> <p><strong>App.vue</strong></p> <pre><code>&lt;template&gt;   &lt;button @click="isShowDemo = !isShowDemo"&gt;控制Demo组件显示/隐藏&lt;/button&gt;   &lt;Demo v-if="isShowDemo"&gt;&lt;/Demo&gt; &lt;/template&gt;  &lt;script&gt; import Demo from "./components/Demo.vue"; import { ref } from "vue"; export default {   name: "App",   components: { Demo },   setup() {     let isShowDemo = ref(true);      return { isShowDemo };   }, }; &lt;/script&gt;</code></pre> </blockquote> <h2 id="1.3%C2%A0Composition%20API%20%E5%BD%A2%E5%BC%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90">1.3&nbsp;Composition API 形式的生命周期钩子</h2> <blockquote> <p><a class="link-info" href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://v3.cn.vuejs.org/guide/composition-api-lifecycle-hooks.html"  title="Vue3官方文档 - 组合式API -&nbsp;生命周期钩子" rel="nofollow">Vue3官方文档 - 组合式API -&nbsp;生命周期钩子</a></p> </blockquote> <p>Vue3.0也提供了 Composition API 形式的生命周期钩子，与Vue2.x中钩子对应关系如下：</p> <table align="center" border="1" cellpadding="1" cellspacing="1" style="width:500px;"> <caption>   setup () 内部调用生命周期钩子</caption> <tbody> <tr> <th>选项式 API</th> <th>Hook inside<code>setup</code></th> </tr> <tr> <td style="text-align:center;">beforeCreate</td> <td style="text-align:center;">Not needed*</td> </tr> <tr> <td style="text-align:center;">created</td> <td style="text-align:center;">Not needed*</td> </tr> <tr> <td style="text-align:center;">beforeMount</td> <td style="text-align:center;">onBeforeMount</td> </tr> <tr> <td style="text-align:center;">mounted</td> <td style="text-align:center;">onMounted</td> </tr> <tr> <td style="text-align:center;">beforeUpdate</td> <td style="text-align:center;">onBeforeUpdate</td> </tr> <tr> <td style="text-align:center;">updated</td> <td style="text-align:center;">onUpdated</td> </tr> <tr> <td style="text-align:center;">beforeUnmount</td> <td style="text-align:center;">onBeforeUnmount</td> </tr> <tr> <td style="text-align:center;">unmounted</td> <td style="text-align:center;">onUnmounted</td> </tr> <tr> <td style="text-align:center;">errorCaptured</td> <td style="text-align:center;">onErrorCaptured</td> </tr> <tr> <td style="text-align:center;">renderTracked</td> <td style="text-align:center;">onRenderTracked</td> </tr> <tr> <td style="text-align:center;">renderTriggered</td> <td style="text-align:center;">onRenderTriggered</td> </tr> <tr> <td style="text-align:center;">activated</td> <td style="text-align:center;">onActivated</td> </tr> <tr> <td style="text-align:center;">deactivated</td> <td style="text-align:center;">onDeactivated</td> </tr> </tbody> </table> <p>TIP：</p> <ul> <li>因为<span style="background-color:#d7d8d9;">setup</span> 是围绕<span style="background-color:#d7d8d9;">beforeCreate</span> 和<span style="background-color:#d7d8d9;">created</span> 生命周期钩子运行的，所以不需要显式地定义它们。换句话说，在这些钩子中编写的任何代码都应该直接在<span style="background-color:#d7d8d9;">setup</span> 函数中编写。</li> </ul> <p><strong>简单案例练习</strong></p> <ul> <li>创建一个组件Demo.vue，并定义一个sum属性，添加点击事件更新sum的内容</li> <li>Demo.vue 中setup函数中添加 Composition API 形式的生命周期钩子，并在控制台输出</li> <li>App.vue中引入Demo组件，并使用<span style="background-color:#d7d8d9;">v-if API</span> 和 添加点击事件控制 Demo组件 显示和隐藏</li> </ul> <p>效果展示</p> <p class="img-center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220606/14a80788a1df7a40b952259d8c9771e5.jpg"></p> <p>&nbsp;仅需修改<strong>Demo.vue</strong>中相关代码即可</p> <pre><code>&lt;script&gt; import {   ref,   onBeforeMount,   onMounted,   onBeforeUpdate,   onUpdated,   onBeforeUnmount,   onUnmounted, } from "vue"; export default {   name: "Demo",   setup() {     console.log("-----setup-----");     // 数据     let sum = ref(0);      onBeforeMount(() =&gt; {       console.log("-----onBeforeMount-----");     });     onMounted(() =&gt; {       console.log("-----onMounted-----");     });     onBeforeUpdate(() =&gt; {       console.log("-----onBeforeUpdate-----");     });     onUpdated(() =&gt; {       console.log("-----onUpdated-----");     });     onBeforeUnmount(() =&gt; {       console.log("-----onBeforeUnmount-----");     });     onUnmounted(() =&gt; {       console.log("-----onUnmounted-----");     });      return { sum };   }, }; &lt;/script&gt;</code></pre> <hr/> </h1> <ul> <li>hook：本质是一个函数，把setup函数中使用的 Composition API进行封装</li> <li>类似于Vue2.x中的minxin</li> <li>自定义hook的优势：复用代码，让setup中的逻辑更清楚易懂</li> </ul> <p><strong>简单案例练习</strong></p> <p class="img-center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220606/956aab113f3fb1f36b70701a31d4a043.jpg"></p> <ul> <li>在hooks文件夹下创建一个usePoint.js文件，并在其内编写鼠标点击事件，并获取相关坐标的方法与数据</li> <li>在Demo.vue组件内引用&nbsp;usePoint.js</li> <li>在Demo组件隐藏后，usePoint 不生效</li> </ul> <blockquote> <p><strong>usePoint.js</strong></p> <pre><code>import { reactive, onMounted, onBeforeUnmount } from "vue"; export default function () {   // 实现鼠标"打点"相关的数据   let point = reactive({     x: 0,     y: 0,   });    // 实现鼠标"打点"相关的方法   function savePoint(event) {     point.x = event.pageX;     point.y = event.pageY;     console.log(event.pageX, event.pageY);   }    //   实现鼠标"打点"相关的生命周期钩子   onMounted(() =&gt; {     window.addEventListener("click", savePoint);   });    onBeforeUnmount(() =&gt; {     window.removeEventListener("click", savePoint);   });    return point; }</code></pre> </blockquote> <blockquote> <p><strong>Demo.vue</strong></p> <pre><code>&lt;template&gt;   &lt;h2&gt;当前求和为：{<!-- -->{ sum }}&lt;/h2&gt;   &lt;button @click="sum++"&gt;点击+1&lt;/button&gt;   &lt;hr /&gt;   &lt;h2&gt;当前点击时鼠标的坐标为：x：{<!-- -->{ point.x }}, y：{<!-- -->{ point.y }}&lt;/h2&gt; &lt;/template&gt;  &lt;script&gt; import { ref } from "vue"; import usePoint from "../hooks/usePoint"; export default {   name: "Demo",   setup() {     // 数据     let sum = ref(0);     let point = usePoint();     return { sum, point };   }, }; &lt;/script&gt;</code></pre> </blockquote> <hr/> </h1> <blockquote> <p><a class="link-info" href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://v3.cn.vuejs.org/api/refs-api.html#toref"  title="Vue3官方文档 - toRef" rel="nofollow">Vue3官方文档 - toRef</a></p> <p><a class="link-info" href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://v3.cn.vuejs.org/api/refs-api.html#torefs"  title="Vue3官方文档 - toRefs" rel="nofollow">Vue3官方文档 - toRefs</a></p> </blockquote> <h2 id="3.1%20%E4%BD%9C%E7%94%A8">3.1 作用</h2> <p>创建一个ref对象，其value值指向另一个对象中的某个属性</p> <h2 id="3.2%20%E8%AF%AD%E6%B3%95">3.2 语法</h2> <pre><code>const fooRef = toRef(state, 'foo')</code></pre> <h2 id="3.3%20%E5%BA%94%E7%94%A8">3.3 应用</h2> <p>要将响应式对象中的某个属性单独提供给外部使用时</p> <h2 id="3.4%20%E6%89%A9%E5%B1%95">3.4 扩展</h2> <p>toRefs 与 toRef 功能一致，但可以批量创建多个ref对象，例如</p> <pre><code>const stateAsRefs = toRefs(state)</code></pre> <h2 id="3.5%20%E7%AE%80%E5%8D%95%E6%A1%88%E4%BE%8B%E7%BB%83%E4%B9%A0">3.5 简单案例练习</h2> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220606/cabd62410b224388b51f88f582fa0330.jpg"></p> <ul> <li>使用toRef</li> </ul> <pre><code>&lt;template&gt;   &lt;h2&gt;姓名：{<!-- -->{ name }}&lt;/h2&gt;   &lt;h2&gt;年龄：{<!-- -->{ age }}&lt;/h2&gt;   &lt;h2&gt;零用钱:{<!-- -->{ money }}&lt;/h2&gt;   &lt;button @click="name += '!'"&gt;姓名添加上！&lt;/button&gt;   &lt;button @click="age++"&gt;年龄增长&lt;/button&gt;   &lt;button @click="money++"&gt;零花钱增加&lt;/button&gt; &lt;/template&gt;  &lt;script&gt; import { reactive, toRef } from "vue"; export default {   name: "App",   setup() {     let person = reactive({       name: "周星星",       age: 25,       item: {         wallet: {           money: 100,         },       },     });      return {       // 使用toRef       name: toRef(person, "name"),       age: toRef(person, "age"),       money: toRef(person.item.wallet, "money"),     };   }, }; &lt;/script&gt;</code></pre> <ul> <li>使用toRefs</li> </ul> <pre><code>&lt;template&gt;   &lt;h2&gt;姓名：{<!-- -->{ name }}&lt;/h2&gt;   &lt;h2&gt;年龄：{<!-- -->{ age }}&lt;/h2&gt;   &lt;h2&gt;零用钱:{<!-- -->{ item.wallet.money }}&lt;/h2&gt;   &lt;button @click="name += '!'"&gt;姓名添加上！&lt;/button&gt;   &lt;button @click="age++"&gt;年龄增长&lt;/button&gt;   &lt;button @click="item.wallet.money++"&gt;零花钱增加&lt;/button&gt; &lt;/template&gt;  &lt;script&gt; import { reactive, toRef, toRefs } from "vue"; export default {   name: "App",   setup() {     let person = reactive({       name: "周星星",       age: 25,       item: {         wallet: {           money: 100,         },       },     });      return {       // 使用toRef       // name: toRef(person, "name"),       // age: toRef(person, "age"),       // money: toRef(person.item.wallet, "money"),        // 使用toRefs       ...toRefs(person),     };   }, }; &lt;/script&gt;  &lt;style&gt;&lt;/style&gt;</code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-54029.htm">动物疫苗的生产工艺流程（动物疫苗的生产工艺流程有哪些）</a></p>
+                                        <p>下一个：<a href="/news/article-54572.htm">动物疫苗价格查询表最新消息图片 动物疫苗价格查询表最新消息图片大全</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-36324.htm" title="北京宠物免费领养官网网址（北京宠物免费领养官网网址是多少）">北京宠物免费领养官网网址（北京宠物免费领养官网网址是多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-7-free-subscribe-node.htm" title="1月7日每日最新机场订阅→18.2M/S|免费节点SSR/Shadowrocket/V2ray/Clash链接地址分享">1月7日每日最新机场订阅→18.2M/S|免费节点SSR/Shadowrocket/V2ray/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-37394.htm" title="中国十大品牌兽药批发（中国十大名牌兽药厂家）">中国十大品牌兽药批发（中国十大名牌兽药厂家）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-31-node-share.htm" title="1月31日每日最新机场订阅→22.5M/S|免费节点V2ray/Shadowrocket/Clash/SSR链接地址分享">1月31日每日最新机场订阅→22.5M/S|免费节点V2ray/Shadowrocket/Clash/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-35253.htm" title="动物疫苗打一次管多长时间有效呢视频（动物接种疫苗多少钱）">动物疫苗打一次管多长时间有效呢视频（动物接种疫苗多少钱）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-19-free-node-subscribe.htm" title="1月19日每日最新机场订阅→21.5M/S|免费节点SSR/Clash/Shadowrocket/V2ray链接地址分享">1月19日每日最新机场订阅→21.5M/S|免费节点SSR/Clash/Shadowrocket/V2ray链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-43331.htm" title="孤狸可以养吗（养殖孤狸）">孤狸可以养吗（养殖孤狸）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-15-free-node-subscribe.htm" title="1月15日每日最新机场订阅→22.4M/S|免费节点SSR/Shadowrocket/Clash/V2ray链接地址分享">1月15日每日最新机场订阅→22.4M/S|免费节点SSR/Shadowrocket/Clash/V2ray链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-44813.htm" title="resttemplate  返回中文乱码解决">resttemplate  返回中文乱码解决</a></li>
+                        <li class="py-2"><a href="/news/article-46299.htm" title="MySQL 案例分析讲解外连接语法_Mysql">MySQL 案例分析讲解外连接语法_Mysql</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
