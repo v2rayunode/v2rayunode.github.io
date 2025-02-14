@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-55679.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>springboot+layui有关分页问题</title>
+        <meta name="description" content="分页不生效明明可以分页 但是后端接收到的pagenum始终是1  &nbsp;   &nbsp;  &nbsp; 提示：这里描述项目中遇到的问题： 例如：分页出问题 @Override public " />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-55679.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="springboot+layui有关分页问题" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/aa3ddc9bff6fda25db17c202e775086f.webp" />
+        <meta property="og:release_date" content="2025-02-13T03:08:39" />
+    <meta property="og:updated_time" content="2025-02-13T03:08:39" />
+        <meta property="og:description" content="分页不生效明明可以分页 但是后端接收到的pagenum始终是1  &nbsp;   &nbsp;  &nbsp; 提示：这里描述项目中遇到的问题： 例如：分页出问题 @Override public " />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="springboot+layui有关分页问题">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>springboot+layui有关分页问题</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <p>分页不生效明明可以分页 但是后端接收到的pagenum始终是1</p> <p><img fetchpriority="high" decoding="async" alt="" height="666" src="http://img.555519.xyz/uploads/20221229/c59a527b0de303d609252340235dc055.jpg"></p> <p>&nbsp;</p> <p><img decoding="async" alt="" height="638" src="http://img.555519.xyz/uploads/20221229/824848c76af69c307472c3fba7f563be.jpg"></p> <hr/> <p>&nbsp;<img decoding="async" alt="" height="112" src="http://img.555519.xyz/uploads/20221229/be4f575893cf736c2e3af956c4f27b01.jpg"></p> <p><img loading="lazy" decoding="async" alt="" height="307" src="http://img.555519.xyz/uploads/20221229/1c88fc7a28a3d6682389c4f0a5eaba6e.jpg"></p> <p>&nbsp;</p> <p><code>提示：这里描述项目中遇到的问题：</code></p> <p>例如：分页出问题</p> <pre>@Override public Result selectAll(Integer page,Integer size) {     //启动分页     PageHelper.startPage(page,size);     //查询所有数据进行分页     List&lt;PropertyNotice&gt; notices = propertyNoticeMapper.selectAll();     PageInfo&lt;PropertyNotice&gt; pageInfo = new PageInfo&lt;&gt;(notices);     return Result.ok().msg("").count(notices.size()).data(pageInfo); }</pre> <hr/> </h1> <blockquote> <p>提示：这里填写问题的分析：通过对前端数据源的打印可以知道这里的count数据是不对的，这里本来应该是总条数却变成了我们的设置数，那么就默认这样也只有这么多数据，自然也就不能分页，不能点击下一页</p> </blockquote> <p><img loading="lazy" decoding="async" alt="" height="256" src="http://img.555519.xyz/uploads/20221229/d8159448498ec37a0727503edb8e1a4d.jpg"></p> <hr/> <p>&nbsp;</p> </h1> <blockquote> <p>提示：这里填写该问题的具体解决方案：解决办法就是只需要把count还原为总数据条数，而不是分页之后的条数，或者直接使用total</p> </blockquote> <p><img loading="lazy" decoding="async" alt="" height="313" src="http://img.555519.xyz/uploads/20221229/5dd23ac8c5de4b88dd9f942824d8acae.jpg"></p> <p>这样前端就没问题了</p> <p><img loading="lazy" decoding="async" alt="" height="628" src="http://img.555519.xyz/uploads/20221229/c054bb94036e4fa7bd27d59f86c2e22b.jpg"></p> <p><img loading="lazy" decoding="async" alt="" height="656" src="http://img.555519.xyz/uploads/20221229/910a0f2e743bd6c63c6a16eca77b6db4.jpg">&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-55126.htm">动物疫苗周期多长时间有效 动物疫苗周期多长时间有效啊</a></p>
+                                        <p>下一个：<a href="/news/article-55680.htm">属马养猫还是养狗（属马适合养猫还是狗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-1-23-free-high-speed-nodes.htm" title="1月23日每日最新机场订阅→20.9M/S|免费节点Shadowrocket/V2ray/Clash/SSR链接地址分享">1月23日每日最新机场订阅→20.9M/S|免费节点Shadowrocket/V2ray/Clash/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-48229.htm" title="丹阳有领养猫咪的地方吗（丹阳宠物免费领养）">丹阳有领养猫咪的地方吗（丹阳宠物免费领养）</a></li>
+                        <li class="py-2"><a href="/news/article-36898.htm" title="nohup: redirecting stderr to stdout">nohup: redirecting stderr to stdout</a></li>
+                        <li class="py-2"><a href="/news/article-50842.htm" title="页面搭建系统的那些事儿_在线工具">页面搭建系统的那些事儿_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-26-free-node-subscribe.htm" title="1月26日每日最新机场订阅→19.1M/S|免费节点Clash/Shadowrocket/V2ray/SSR链接地址分享">1月26日每日最新机场订阅→19.1M/S|免费节点Clash/Shadowrocket/V2ray/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-31146.htm" title="想寄猫怎么寄（想寄猫怎么寄快递）">想寄猫怎么寄（想寄猫怎么寄快递）</a></li>
+                        <li class="py-2"><a href="/news/article-45807.htm" title="梦见自己搬了新家是什么意思（梦见自己搬了新家是什么意思周公解梦）">梦见自己搬了新家是什么意思（梦见自己搬了新家是什么意思周公解梦）</a></li>
+                        <li class="py-2"><a href="/news/article-34492.htm" title="不建议养的10种狗（不建议养的10种狗泰迪狗）">不建议养的10种狗（不建议养的10种狗泰迪狗）</a></li>
+                        <li class="py-2"><a href="/news/article-52942.htm" title="宠物粮食创业计划书范文大全（宠物粮食创业计划书范文大全集）">宠物粮食创业计划书范文大全（宠物粮食创业计划书范文大全集）</a></li>
+                        <li class="py-2"><a href="/news/article-29660.htm" title="动物疫苗厂家招聘电话 动物疫苗厂家招聘电话是多少">动物疫苗厂家招聘电话 动物疫苗厂家招聘电话是多少</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
