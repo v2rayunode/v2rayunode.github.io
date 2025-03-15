@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-73401.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHP可迭代</title>
+        <meta name="description" content="定义和用法 从7.1版开始，PHP提供了一种称为iterable的新伪类型。实现了Traversable接口的任何对象（例如数组）。该类型使用foreach构造或生成器函数，一次生成一个值。 语法 函" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-73401.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="PHP可迭代" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/82977253972095a20fc67c366bb8fa6d.webp" />
+        <meta property="og:release_date" content="2025-03-14T07:04:50" />
+    <meta property="og:updated_time" content="2025-03-14T07:04:50" />
+        <meta property="og:description" content="定义和用法 从7.1版开始，PHP提供了一种称为iterable的新伪类型。实现了Traversable接口的任何对象（例如数组）。该类型使用foreach构造或生成器函数，一次生成一个值。 语法 函" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PHP可迭代">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>PHP可迭代</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<h2>定义和用法</h2> <p>从7.1版开始，PHP提供了一种称为<strong>iterable</strong>的新伪类型。实现了<strong>Traversable</strong>接口的任何对象（例如数组）。该类型使用foreach构造或生成器函数，一次生成一个值。</p> <h2>语法</h2> <p>函数可以将其参数作为类型进行迭代，以使该函数接受<strong>foreach</strong>语句中使用的一组值。如果该参数不支持foreach循环，则PHP解析器将抛出<strong>TypeError</strong></p> <h2>示例</h2> <pre>&lt;?php $arr1=array("PHP","Java","Python"); function&nbsp;myfunc&nbsp;(iterable&nbsp;$arr1){ &nbsp;&nbsp;&nbsp;foreach&nbsp;($arr1&nbsp;as&nbsp;$lang){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;$lang&nbsp;.&nbsp;"\n"; &nbsp;&nbsp;&nbsp;} } myfunc($arr1); ?&gt;</pre> <p>输出结果</p> <p>这将产生以下结果-</p> <pre>PHP Java Python</pre> <p>PHP函数还可以返回可迭代的数据类型，例如数组。我们使用<strong>&nbsp;is_iterable()</strong>函数来验证返回值的类型。</p> <h2>示例</h2> <pre>&lt;?php function&nbsp;newfunc&nbsp;():iterable{ &nbsp;&nbsp;&nbsp;$arr2=[]; &nbsp;&nbsp;&nbsp;for&nbsp;($i=1;$i&lt;4;$i++){ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$arr2[$i]=$i*2; &nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;return&nbsp;$arr2; } $ret=newfunc(); var_dump&nbsp;(is_iterable($ret)); ?&gt;</pre> <p>输出结果</p> <p>这将产生以下结果-</p> <pre>bool(true)</pre> <p>以下是具有可迭代返回类型的生成器的示例</p> <h2>示例</h2> <pre>&lt;?php function&nbsp;gen():&nbsp;iterable&nbsp;{ &nbsp;&nbsp;&nbsp;yield&nbsp;1; &nbsp;&nbsp;&nbsp;yield&nbsp;2; &nbsp;&nbsp;&nbsp;yield&nbsp;3; } gen(); ?&gt;</pre> <h2>PHP版本</h2> <p>PHP 7.1中引入了可迭代的伪类型</p> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-73400.htm">PHP对象和参考</a></p>
+                                        <p>下一个：<a href="/news/article-74068.htm">兽用疫苗真伪查询（兽用疫苗批号查询）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-node-share.htm" title="3月10日每日最新机场订阅→19.4M/S|免费节点Shadowrocket/SSR/V2ray/Clash链接地址分享">3月10日每日最新机场订阅→19.4M/S|免费节点Shadowrocket/SSR/V2ray/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-57362.htm" title="淘货铺是不是要跑路了（淘货怎么样）">淘货铺是不是要跑路了（淘货怎么样）</a></li>
+                        <li class="py-2"><a href="/news/article-41322.htm" title="猫三联一针有用吗（猫三联是打一针就给一针的钱吗）">猫三联一针有用吗（猫三联是打一针就给一针的钱吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-31-node-share.htm" title="1月31日每日最新机场订阅→22.5M/S|免费节点V2ray/Shadowrocket/Clash/SSR链接地址分享">1月31日每日最新机场订阅→22.5M/S|免费节点V2ray/Shadowrocket/Clash/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-54028.htm" title="天津天照犬业有限公司电话地址（天津天照犬业有限公司电话地址）">天津天照犬业有限公司电话地址（天津天照犬业有限公司电话地址）</a></li>
+                        <li class="py-2"><a href="/news/article-45304.htm" title="AsyncLocal&lt;T&gt;在链路追踪中的应用_在线工具">AsyncLocal&lt;T&gt;在链路追踪中的应用_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-37393.htm" title="成都动物防疫站在哪里 成都动物防疫站在哪里啊">成都动物防疫站在哪里 成都动物防疫站在哪里啊</a></li>
+                        <li class="py-2"><a href="/news/article-48748.htm" title="动物医疗器械有限公司 迈瑞动物医疗器械有限公司">动物医疗器械有限公司 迈瑞动物医疗器械有限公司</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-27-free-subscribe-node.htm" title="1月27日每日最新机场订阅→19.1M/S|免费节点V2ray/Clash/Shadowrocket/SSR链接地址分享">1月27日每日最新机场订阅→19.1M/S|免费节点V2ray/Clash/Shadowrocket/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-2-free-subscribe-node.htm" title="2月2日每日最新机场订阅→19.2M/S|免费节点SSR/Shadowrocket/Clash/V2ray链接地址分享">2月2日每日最新机场订阅→19.2M/S|免费节点SSR/Shadowrocket/Clash/V2ray链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-72726.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MySQL数据库中的Date,DateTime,TimeStamp和Time类型</title>
+        <meta name="description" content="DATETIME类型用在你需要同时包含日期和时间信息的值时。MySQL检索并且以'YYYY-MM-DD HH:MM:SS'格式显示DATETIME值，支持的范围是'1000-01-01 00:00:0" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-72726.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="MySQL数据库中的Date,DateTime,TimeStamp和Time类型" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/82977253972095a20fc67c366bb8fa6d.webp" />
+        <meta property="og:release_date" content="2025-03-13T09:20:46" />
+    <meta property="og:updated_time" content="2025-03-13T09:20:46" />
+        <meta property="og:description" content="DATETIME类型用在你需要同时包含日期和时间信息的值时。MySQL检索并且以'YYYY-MM-DD HH:MM:SS'格式显示DATETIME值，支持的范围是'1000-01-01 00:00:0" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="MySQL数据库中的Date,DateTime,TimeStamp和Time类型">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>MySQL数据库中的Date,DateTime,TimeStamp和Time类型</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p><span style="font-size:14px"><span style="color:#ff0000"><strong>DATETIME</strong></span>类型用在你需要同时包含日期和时间信息的值时。MySQL检索并且以'YYYY-MM-DD HH:MM:SS'格式显示DATETIME值，支持的范围是'1000-01-01 00:00:00'到'9999-12-31 23:59:59'。（“支持”意味着尽管更早的值可能工作，但不能保证他们可以。）</span></p> <p><span style="font-size:14px"></span></p> <p><span style="font-size:14px"><span style="color:#ff0000"><strong>DATE</strong></span>类型用在你仅需要日期值时，没有时间部分。MySQL检索并且以'YYYY-MM-DD'格式显示DATE值，支持的范围是'1000-01-01'到'9999-12-31'。</span></p> <p><span style="font-size:14px"></span></p> <p><span style="font-size:14px"><span style="color:#ff0000"><strong>TIMESTAMP</strong></span>列类型提供一种类型，你可以使用它自动地用当前的日期和时间标记INSERT或UPDATE的操作。</span></p> <p><span style="font-size:14px"></span></p> <p><span style="font-size:14px"><span style="color:#ff0000"><strong>TIME</strong></span>数据类型表示一天中的时间。MySQL检索并且以"HH:MM:SS"格式显示TIME值。支持的范围是'00:00:00'到'23:59:59'。</span></p> <p><span style="font-size:14px">创建表SQL</span></p> <div class="dp-highlighter bg_sql"> <ol class="dp-sql"> <li class="alt"><span class="keyword"><strong><span style="color:#006699">CREATE</span></strong></span><span class="keyword"><strong><span style="color:#006699">TABLE</span></strong></span>&nbsp;`tb_test`&nbsp;(</li> <li>&nbsp;&nbsp;`id`<span class="keyword"><strong><span style="color:#006699">int</span></strong></span>(11)<span class="op"><span style="color:#808080">NOT</span></span><span class="op"><span style="color:#808080">NULL</span></span>&nbsp;AUTO_INCREMENT,</li> <li class="alt">&nbsp;&nbsp;`date1`<span class="keyword"><strong><span style="color:#006699">timestamp</span></strong></span><span class="op"><span style="color:#808080">NOT</span></span><span class="op"><span style="color:#808080">NULL</span></span><span class="keyword"><strong><span style="color:#006699">DEFAULT</span></strong></span><span class="string"><span style="color:#0000ff">'0000-00-00&nbsp;00:00:00'</span></span><span class="keyword"><strong><span style="color:#006699">ON</span></strong></span><span class="keyword"><strong><span style="color:#006699">UPDATE</span></strong></span>&nbsp;CURRENT_TIM</li> <li>ESTAMP,</li> <li class="alt">&nbsp;&nbsp;`date2`<span class="keyword"><strong><span style="color:#006699">date</span></strong></span><span class="keyword"><strong><span style="color:#006699">DEFAULT</span></strong></span><span class="op"><span style="color:#808080">NULL</span></span>,</li> <li>&nbsp;&nbsp;`date3`&nbsp;datetime<span class="keyword"><strong><span style="color:#006699">DEFAULT</span></strong></span><span class="op"><span style="color:#808080">NULL</span></span>,</li> <li class="alt">&nbsp;&nbsp;`<span class="keyword"><strong><span style="color:#006699">time</span></strong></span>`<span class="keyword"><strong><span style="color:#006699">time</span></strong></span><span class="keyword"><strong><span style="color:#006699">DEFAULT</span></strong></span><span class="op"><span style="color:#808080">NULL</span></span>,</li> <li><span class="keyword"><strong><span style="color:#006699">PRIMARY</span></strong></span><span class="keyword"><strong><span style="color:#006699">KEY</span></strong></span>&nbsp;(`id`)</li> <li class="alt">);</li> </ol> </div> <p><span style="font-size:14px">运行效果截图：</span></p> <p><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220603/628489041d4df0d1b2126dab06ff31c9.jpg"></p> <p></p> <p><span style="font-size:14px">日期类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 存储空间&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 日期格式&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 日期范围</p> <p> datetime&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 bytes&nbsp;&nbsp; YYYY-MM-DD HH:MM:SS&nbsp;&nbsp; 1000-01-01 00:00:00 ~ 9999-12-31 23:59:59<br /> timestamp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 bytes&nbsp;&nbsp; YYYY-MM-DD HH:MM:SS&nbsp;&nbsp; 1970-01-01 00:00:01 ~ 2037-12-31 23:59:59<br /> date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 3 bytes&nbsp;&nbsp; YYYY-MM-DD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 1000-01-01 ~ 9999-12-31<br /></span></p> <p><span style="font-size:14px">datetime和timestamp的区别：<br /> 1.datetime 的日期范围比较大；如果有1970年以前的数据还是要用datetime.但是timestamp 所占存储空间比较小。<br /> 2.timestamp 类型的列还有个特性：默认情况下，在 insert, update 数据时，timestamp 列会自动以当前时间（CURRENT_TIMESTAMP）填充/更新。</span></p> <p><span style="font-size:14px">3.timestamp比较受时区timezone的影响以及MYSQL版本和服务器的<a target="_blank" rel="nofollow"><u><strong>SQL</strong></u></a> MODE的影响.</p> <p> 使用一个常用的格式集的任何一个，你可以指定DATETIME、DATE和TIMESTAMP值：<br /> 'YYYY-MM-DD HH:MM:SS'或'YY-MM-DD HH:MM:SS'格式的一个字符串,允许一种"宽松"的语法:任何标点可用作在日期部分和时间部分之间的分隔符。例如，'98-12-31 11:30:45'、'98.12.31 11+30+45'、'98/12/31 11*30*45'和'98@12@31 11^30^45'是等价的。</span></p> <p></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-72064.htm">动物疫苗种类有几种名称和作用（动物疫苗的使用方法及注意事项）</a></p>
+                                        <p>下一个：<a href="/news/article-72727.htm">浅谈软件性能提升相关的概念</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-65034.htm" title="宠物猫一般多少钱一只?（宠物猫多少钱一只正常价）">宠物猫一般多少钱一只?（宠物猫多少钱一只正常价）</a></li>
+                        <li class="py-2"><a href="/news/article-59644.htm" title="天津宠物狗免费领养地点（天津哪里有宠物领养的地方）">天津宠物狗免费领养地点（天津哪里有宠物领养的地方）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-free-subscribe-node.htm" title="3月15日每日最新机场订阅→19.6M/S|免费节点Clash/Shadowrocket/V2ray/SSR链接地址分享">3月15日每日最新机场订阅→19.6M/S|免费节点Clash/Shadowrocket/V2ray/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-17-free-node-subscribe-links.htm" title="2月17日每日最新机场订阅→20.8M/S|免费节点Clash/SSR/Shadowrocket/V2ray链接地址分享">2月17日每日最新机场订阅→20.8M/S|免费节点Clash/SSR/Shadowrocket/V2ray链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-13-free-node-subscribe.htm" title="2月13日每日最新机场订阅→22.6M/S|免费节点SSR/V2ray/Clash/Shadowrocket链接地址分享">2月13日每日最新机场订阅→22.6M/S|免费节点SSR/V2ray/Clash/Shadowrocket链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-57361.htm" title="ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具">ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-4-node-share-links.htm" title="2月4日每日最新机场订阅→22.7M/S|免费节点Clash/SSR/V2ray/Shadowrocket链接地址分享">2月4日每日最新机场订阅→22.7M/S|免费节点Clash/SSR/V2ray/Shadowrocket链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-68174.htm" title="动物疫苗新规定最新版是什么意思（动物疫苗的使用方法及注意事项）">动物疫苗新规定最新版是什么意思（动物疫苗的使用方法及注意事项）</a></li>
+                        <li class="py-2"><a href="/news/article-50843.htm" title="猫咪疫苗三针要隔多少天（猫咪的三针疫苗间隔多久）">猫咪疫苗三针要隔多少天（猫咪的三针疫苗间隔多久）</a></li>
+                        <li class="py-2"><a href="/news/article-43331.htm" title="孤狸可以养吗（养殖孤狸）">孤狸可以养吗（养殖孤狸）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
