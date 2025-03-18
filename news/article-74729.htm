@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-74729.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Boot运行原理</title>
+        <meta name="description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;任何Spring Boot项目都会有一个名为*Application的入口类，入口类里面有一个main方法，这个main方法其实就是一个标准" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-74729.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="Spring Boot运行原理" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/35f2ca1dcee5e084eaf1ccbd9a4339cc.webp" />
+        <meta property="og:release_date" content="2025-03-16T10:27:05" />
+    <meta property="og:updated_time" content="2025-03-16T10:27:05" />
+        <meta property="og:description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;任何Spring Boot项目都会有一个名为*Application的入口类，入口类里面有一个main方法，这个main方法其实就是一个标准" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Spring Boot运行原理">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>Spring Boot运行原理</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;任何Spring Boot项目都会有一个名为*Application的入口类，入口类里面有一个main方法，这个main方法其实就是一个标准的java应用的入口类方法。在这个main方法中使用SpringApplication.run，启动Spring Boot应用项目，例如：</p> <pre><code class="language-java">@SpringBootApplication(exclude={DataSourceAutoConfiguration.class}) public class DemoApplication { 	public static void main(String[] args) { 		SpringApplication.run(DemoApplication.class, args); 	} }</code></pre> <p><span style="color:rgb(51,51,51);font-family:verdana, Arial, Helvetica, sans-serif;font-size:14px;background-color:rgb(255,255,255);">从上面代码可以看出，Annotation定义（@SpringBootApplication）和类定义（SpringApplication.run）最为耀眼，所以要揭开SpringBoot的神秘面纱，我们要从这两位开始就可以了。</span><br /> </p> <h3>@SpringBootApplication</h3> <pre><code class="language-java">@java.lang.annotation.Target({java.lang.annotation.ElementType.TYPE}) @java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME) @java.lang.annotation.Documented @java.lang.annotation.Inherited @org.springframework.boot.SpringBootConfiguration @org.springframework.boot.autoconfigure.EnableAutoConfiguration @org.springframework.context.annotation.ComponentScan(excludeFilters = {@org.springframework.context.annotation.ComponentScan.Filter(type = org.springframework.context.annotation.FilterType.CUSTOM, classes = {org.springframework.boot.context.TypeExcludeFilter.class}), @org.springframework.context.annotation.ComponentScan.Filter(type = org.springframework.context.annotation.FilterType.CUSTOM, classes = {org.springframework.boot.autoconfigure.AutoConfigurationExcludeFilter.class})}) public @interface SpringBootApplication { }</code></pre> <p>虽然定义使用了多个Annotation进行了原信息标注，但实际上重要的只有三个Annotation：<br /> <br />@Configuration（@SpringBootConfiguration点开查看发现里面还是应用了@Configuration）<br /> <br />@EnableAutoConfiguration<br /> <br />@ComponentScan<br /> </p> <p>因此，若不使用@SpringBootApplication注解，则可以在入口类上直接使用@Configuration、@EnableAutoConfiguration、@ComponentScan。其中核心功能是由@EnableAutoConfiguration注解提供的。</p> <h3>@EnableAutoConfiguration</h3> <p>&nbsp;&nbsp;&nbsp;&nbsp;大家是否还记得Spring框架提供的各种名字为@Enable开头的Annotation定义？比如@EnableScheduling、@EnableCaching、@EnableMBeanExport等，@EnableAutoConfiguration的理念和做事方式其实一脉相承，简单概括一下就是，借助@Import的支持，收集和注册特定场景相关的bean定义。</p> <ul> <li>@EnableScheduling是通过@Import将Spring调度框架相关的bean定义都加载到IoC容器。</li> <li>@EnableMBeanExport是通过@Import将JMX相关的bean定义加载到IoC容器。</li> </ul> <p>而@EnableAutoConfiguration也是借助@Import的帮助，将所有符合自动配置条件的bean定义加载到IoC容器，仅此而已！<br /> <br />@EnableAutoConfiguration作为一个复合Annotation,其自身定义关键信息如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20221230/6e0cb0ff65fccebd54e4a8166dfca61e.jpg" alt="Spring Boot运行原理"></p> <p>其中，最关键的要属@Import(EnableAutoConfigurationImportSelector.class)，借助EnableAutoConfigurationImportSelector，@EnableAutoConfiguration可以帮助SpringBoot应用将所有符合条件的@Configuration配置都加载到当前SpringBoot创建并使用的IoC容器。</p> <h3>SpringFactoriesLoader<br /> </h3> <p>EnableAutoConfigurationImportSelector借助于SpringFactoriesLoader.loadFactoryNames()从指定的配置文件META-INF/spring.factories加载配置。并将其中org.springframework.boot.autoconfigure.EnableutoConfiguration对应的配置项通过反射（Java Refletion）实例化为对应的标注了@Configuration的JavaConfig形式的IoC容器配置类，然后汇总为一个并加载到IoC容器。</p> <pre><code class="language-java"># Initializers org.springframework.context.ApplicationContextInitializer=\ org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer,\ org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer  # Application Listeners org.springframework.context.ApplicationListener=\ org.springframework.boot.autoconfigure.BackgroundPreinitializer  # Auto Configuration Import Listeners org.springframework.boot.autoconfigure.AutoConfigurationImportListener=\ org.springframework.boot.autoconfigure.condition.ConditionEvaluationReportAutoConfigurationImportListener  # Auto Configuration Import Filters org.springframework.boot.autoconfigure.AutoConfigurationImportFilter=\ org.springframework.boot.autoconfigure.condition.OnClassCondition  # Auto Configure org.springframework.boot.autoconfigure.EnableAutoConfiguration=\ org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\ org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\ org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\ org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\ org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\ org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration,\ org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\ org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,\ org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\ org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,\ org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\ org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,\ org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration,\ org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration,\ org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\ org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\ org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\ org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\ org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\ org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\ org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration,\ org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration,\ org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\ org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\ org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration,\ org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration,\ org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration,\ org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration,\ org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration,\ org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration,\ org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration,\ org.springframework.boot.autoconfigure.elasticsearch.jest.JestAutoConfiguration,\ org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,\ org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\ org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration,\ org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration,\ org.springframework.boot.autoconfigure.hazelcast.HazelcastAutoConfiguration,\ org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration,\ org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,\ org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration,\ org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\ org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,\ org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\ org.springframework.boot.autoconfigure.jdbc.JndiDataSourceAutoConfiguration,\ org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration,\ org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,\ org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration,\ org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,\ org.springframework.boot.autoconfigure.jms.JndiConnectionFactoryAutoConfiguration,\ org.springframework.boot.autoconfigure.jms.activemq.ActiveMQAutoConfiguration,\ org.springframework.boot.autoconfigure.jms.artemis.ArtemisAutoConfiguration,\ org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration,\ org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration,\ org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration,\ org.springframework.boot.autoconfigure.jooq.JooqAutoConfiguration,\ org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration,\ org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\ org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration,\ org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration,\ org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,\ org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,\ org.springframework.boot.autoconfigure.mobile.DeviceResolverAutoConfiguration,\ org.springframework.boot.autoconfigure.mobile.DeviceDelegatingViewResolverAutoConfiguration,\ org.springframework.boot.autoconfigure.mobile.SitePreferenceAutoConfiguration,\ org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration,\ org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\ org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,\ org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration,\ org.springframework.boot.autoconfigure.reactor.ReactorAutoConfiguration,\ org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration,\ org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration,\ org.springframework.boot.autoconfigure.security.FallbackWebSecurityAutoConfiguration,\ org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration,\ org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration,\ org.springframework.boot.autoconfigure.session.SessionAutoConfiguration,\ org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration,\ org.springframework.boot.autoconfigure.social.FacebookAutoConfiguration,\ org.springframework.boot.autoconfigure.social.LinkedInAutoConfiguration,\ org.springframework.boot.autoconfigure.social.TwitterAutoConfiguration,\ org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\ org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,\ org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration,\ org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration,\ org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,\ org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration,\ org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration,\ org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\ org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration,\ org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\ org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration,\ org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration,\ org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration,\ org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration,\ org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration,\ org.springframework.boot.autoconfigure.websocket.WebSocketMessagingAutoConfiguration,\ org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration  # Failure analyzers org.springframework.boot.diagnostics.FailureAnalyzer=\ org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer,\ org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer,\ org.springframework.boot.autoconfigure.jdbc.HikariDriverConfigurationFailureAnalyzer  # Template availability providers org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider=\ org.springframework.boot.autoconfigure.freemarker.FreeMarkerTemplateAvailabilityProvider,\ org.springframework.boot.autoconfigure.mustache.MustacheTemplateAvailabilityProvider,\ org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAvailabilityProvider,\ org.springframework.boot.autoconfigure.thymeleaf.ThymeleafTemplateAvailabilityProvider,\ org.springframework.boot.autoconfigure.web.JspTemplateAvailabilityProvider </code></pre> <p></p> <p>参考：</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/zheting/p/6707035.html"  rel="nofollow">https://www.cnblogs.com/zheting/p/6707035.html</a></p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.jianshu.com/p/d51e1896a5f7"  rel="nofollow">https://www.jianshu.com/p/d51e1896a5f7</a></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-74728.htm">HTML 5验证有用吗</a></p>
+                                        <p>下一个：<a href="/news/article-75408.htm">UnrealEngine创建自定义资产类型</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-1-30-node-share.htm" title="1月30日每日最新机场订阅→18.8M/S|免费节点Shadowrocket/SSR/V2ray/Clash链接地址分享">1月30日每日最新机场订阅→18.8M/S|免费节点Shadowrocket/SSR/V2ray/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-25-free-node-subscribe.htm" title="1月25日每日最新机场订阅→21.3M/S|免费节点V2ray/Shadowrocket/Clash/SSR链接地址分享">1月25日每日最新机场订阅→21.3M/S|免费节点V2ray/Shadowrocket/Clash/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-59076.htm" title="狗粮品牌大全排行榜最新（狗粮排名前十品牌价格）">狗粮品牌大全排行榜最新（狗粮排名前十品牌价格）</a></li>
+                        <li class="py-2"><a href="/news/article-40342.htm" title="广州宠物狗救助站电话多少（广州狗狗救助中心电话）">广州宠物狗救助站电话多少（广州狗狗救助中心电话）</a></li>
+                        <li class="py-2"><a href="/news/article-45305.htm" title="160型饲料颗粒机多少钱一台（160型饲料颗粒机多少钱一台啊）">160型饲料颗粒机多少钱一台（160型饲料颗粒机多少钱一台啊）</a></li>
+                        <li class="py-2"><a href="/news/article-49277.htm" title="JavaCPP快速入门(官方demo增强版)">JavaCPP快速入门(官方demo增强版)</a></li>
+                        <li class="py-2"><a href="/news/article-40343.htm" title="开宠物店挣钱吗（加盟宠物店和自己开哪个划算）">开宠物店挣钱吗（加盟宠物店和自己开哪个划算）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-18-node-share.htm" title="2月18日每日最新机场订阅→21.6M/S|免费节点V2ray/SSR/Clash/Shadowrocket链接地址分享">2月18日每日最新机场订阅→21.6M/S|免费节点V2ray/SSR/Clash/Shadowrocket链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-free-high-speed-nodes.htm" title="2月9日每日最新机场订阅→22.7M/S|免费节点V2ray/Clash/SSR/Shadowrocket链接地址分享">2月9日每日最新机场订阅→22.7M/S|免费节点V2ray/Clash/SSR/Shadowrocket链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-21-node-share.htm" title="1月21日每日最新机场订阅→21.2M/S|免费节点SSR/Clash/V2ray/Shadowrocket链接地址分享">1月21日每日最新机场订阅→21.2M/S|免费节点SSR/Clash/V2ray/Shadowrocket链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">54</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
