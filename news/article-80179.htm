@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-80179.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>egg.js在Nginx docker中提示 Session ID unknown</title>
+        <meta name="description" content="问题： 在本地启动egg.js，使用egg-socket.io，能正常连接到websocket，而放到docker中运行，则无法连接得上，提示Session ID unknown，http报400错误" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-80179.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="egg.js在Nginx docker中提示 Session ID unknown" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/becabf2a83a60c5b8ca26e178386a903.webp" />
+        <meta property="og:release_date" content="2025-03-24T08:20:06" />
+    <meta property="og:updated_time" content="2025-03-24T08:20:06" />
+        <meta property="og:description" content="问题： 在本地启动egg.js，使用egg-socket.io，能正常连接到websocket，而放到docker中运行，则无法连接得上，提示Session ID unknown，http报400错误" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="egg.js在Nginx docker中提示 Session ID unknown">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>egg.js在Nginx docker中提示 Session ID unknown</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p><strong>问题：</strong> 在本地启动egg.js，<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://xn--egg-socket-2u5pm927a.io"  rel="nofollow">使用egg-socket.io</a>，能正常连接到websocket，而放到docker中运行，则无法连接得上，提示Session ID unknown，http报400错误。</p> <p><strong>原因：</strong> 之所以在本地能成功连接，是因为本地启动方式为<code>egg-bin dev</code>，会针对本地开发做很多处理，而在docker中启动脚本是<code>egg-scripts start</code>，如果没有在sticky模式下运行，则会出现无法正常连接，同时报错。</p> <p>值得注意点是Egg框架是以 Cluster 方式启动的，而<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://socket.io"  rel="nofollow">socket.io</a> 协议实现需要 sticky 特性支持，否则在多进程模式下无法正常工作。</p> <p>由于<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://socket.io"  rel="nofollow">socket.io</a> 的设计，在多进程中服务器必须在<code>sticky</code> 模式下工作，故需要给 startCluster 传递 sticky 参数。</p> <p>添加之后再运行就连接正常了。</p> <p>修改<code>package.json</code> 中<code>npm scripts</code> 脚本：</p> <pre><code class="prism language-javascript"><span class="token punctuation">{<!-- --></span><span class="token string">"scripts"</span><span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span><span class="token string">"dev"</span><span class="token punctuation">:</span><span class="token string">"egg-bin dev --sticky"</span><span class="token punctuation">,</span><span class="token string">"start"</span><span class="token punctuation">:</span><span class="token string">"egg-scripts start --sticky"</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p><strong>Nginx 配置</strong></p> <pre><code>location / {   # 这两行需要开启   proxy_set_header Upgrade $http_upgrade;   proxy_set_header Connection "upgrade";   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;   proxy_set_header Host $host;   proxy_pass   http://127.0.0.1:7001; }</code></pre> <h4><a id="Cluster__31" rel="nofollow"></a>Cluster 是什么呢？</h4> <p>简单的说，</p> <ul> <li>在服务器上同时启动多个进程。</li> <li>每个进程里都跑的是同一份源代码（好比把以前一个进程的工作分给多个进程去做）。</li> <li>更神奇的是，这些进程可以同时监听一个端口（具体原理推荐阅读 @DavidCai1993 这篇<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://cnodejs.org/topic/56e84480833b7c8a0492e20c"  rel="nofollow">Cluster 实现原理</a>）。</li> </ul> <p>其中：</p> <ul> <li>负责启动其他进程的叫做 Master 进程，他好比是个『包工头』，不做具体的工作，只负责启动其他进程。</li> <li>其他被启动的叫 Worker 进程，顾名思义就是干活的『工人』。它们接收请求，对外提供服务。</li> <li>Worker 进程的数量一般根据服务器的 CPU 核数来定，这样就可以完美利用多核资源。</li> </ul> <pre><code class="prism language-javascript"><span class="token keyword">const</span> cluster<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'cluster'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> http<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> numCPUs<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'os'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">cpus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>cluster<span class="token punctuation">.</span>isMaster<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">// Fork workers.</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span> numCPUs<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     cluster<span class="token punctuation">.</span><span class="token function">fork</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>    cluster<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'exit'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>worker<span class="token punctuation">,</span> code<span class="token punctuation">,</span> signal<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'worker '</span><span class="token operator">+</span> worker<span class="token punctuation">.</span>process<span class="token punctuation">.</span>pid<span class="token operator">+</span><span class="token string">' died'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{<!-- --></span><span class="token comment">// Workers can share any TCP connection</span><span class="token comment">// In this case it is an HTTP server</span>   http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     res<span class="token punctuation">.</span><span class="token function">writeHead</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token string">"hello world\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8000</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-79512.htm">宠物粮食店铺图片大全大图（宠物粮食店铺图片大全大图下载）</a></p>
+                                        <p>下一个：<a href="/news/article-80180.htm">宠物免费领养网站（宠物免费领养网站）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-61990.htm" title="IDEA使用Tomcat部署项目">IDEA使用Tomcat部署项目</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-2-free-subscribe-node.htm" title="2月2日每日最新机场订阅→19.2M/S|免费节点SSR/Shadowrocket/Clash/V2ray链接地址分享">2月2日每日最新机场订阅→19.2M/S|免费节点SSR/Shadowrocket/Clash/V2ray链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-64414.htm" title="动物疫苗接种方法及注意事项有哪些内容呢 动物疫苗接种方法及注意事项有哪些内容呢图片">动物疫苗接种方法及注意事项有哪些内容呢 动物疫苗接种方法及注意事项有哪些内容呢图片</a></li>
+                        <li class="py-2"><a href="/news/article-50314.htm" title="宠物疫苗批号查询入口官网（宠物疫苗批号怎么查）">宠物疫苗批号查询入口官网（宠物疫苗批号怎么查）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-30-node-share.htm" title="1月30日每日最新机场订阅→18.8M/S|免费节点Shadowrocket/SSR/V2ray/Clash链接地址分享">1月30日每日最新机场订阅→18.8M/S|免费节点Shadowrocket/SSR/V2ray/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-21-free-subscribe-node.htm" title="2月21日每日最新机场订阅→18.2M/S|免费节点Shadowrocket/Clash/V2ray/SSR链接地址分享">2月21日每日最新机场订阅→18.2M/S|免费节点Shadowrocket/Clash/V2ray/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-36416.htm" title="国内动物疫苗龙头企业排行榜名单最新（中国动物疫苗10强企业）">国内动物疫苗龙头企业排行榜名单最新（中国动物疫苗10强企业）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-5-node-share-links.htm" title="3月5日每日最新机场订阅→20.8M/S|免费节点V2ray/SSR/Shadowrocket/Clash链接地址分享">3月5日每日最新机场订阅→20.8M/S|免费节点V2ray/SSR/Shadowrocket/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-node-share-links.htm" title="1月18日每日最新机场订阅→20.9M/S|免费节点Shadowrocket/V2ray/Clash/SSR链接地址分享">1月18日每日最新机场订阅→20.9M/S|免费节点Shadowrocket/V2ray/Clash/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-70747.htm" title="动物疫苗企业排名榜前十名 动物疫苗企业排名榜前十名有哪些">动物疫苗企业排名榜前十名 动物疫苗企业排名榜前十名有哪些</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
