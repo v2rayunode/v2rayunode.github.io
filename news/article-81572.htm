@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-81572.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>拓扑排序小结_在线工具</title>
+        <meta name="description" content="首先来理解什么是拓扑排序；拓扑排序简单说是做事情的先后顺序，在现实生活中,人们经常要做连串事情，这些事情之闻有顺序关系或者依赖关系，在做一件事情之前必须先做另一件事，比如安排客人的座位、穿衣服的先后、" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-81572.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="拓扑排序小结_在线工具" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/8d67d6a7bd5b99658b08a2aefb0804ae.webp" />
+        <meta property="og:release_date" content="2025-03-26T08:54:46" />
+    <meta property="og:updated_time" content="2025-03-26T08:54:46" />
+        <meta property="og:description" content="首先来理解什么是拓扑排序；拓扑排序简单说是做事情的先后顺序，在现实生活中,人们经常要做连串事情，这些事情之闻有顺序关系或者依赖关系，在做一件事情之前必须先做另一件事，比如安排客人的座位、穿衣服的先后、" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="拓扑排序小结_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>拓扑排序小结_在线工具</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<p>首先来理解什么是拓扑排序；拓扑排序简单说是做事情的先后顺序，在现实生活中,人们经常要做连串事情，这些事情之闻有顺序关系或者依赖关系，在做一件事情之前必须先做另一件事，比如安排客人的座位、穿衣服的先后、课程学习的先后等。这些事情都可以抽象为图论中的拓扑排序。</p> <p>拓扑排序的概念：<br />设有a、b、c、d等事情,其中a有最高优先级,b、c优先级相同,d是最低优先级，表示为a→(b,c)→d,那么abcd或acbd都是可行的排序。把事情看成图的点，把先后关系看成有向边，问题转化为在图中求一个有先后关系的排序这就是拓扑排序，显然，一个图能进行拓扑排序的完要条件是它是一个有向无环图(DAG)。有环图不能进行拓扑排序，</p> <p>当然，这里还要普及两个图的简单概念：</p> <p>出度：从一个点为起点的出去的边的数量为出度；</p> <p>入度：以一个点为终点出去的边的数量为出度。</p> <p>从入度和长度的概念上可以看出，如果一个点的入度数量为0，那这个点必定是最前面的点，如果出度等于0，则这个点必定又是最后面的点；</p> <p>同时，拓扑排序是基于bfs和dfs的思想实现的，我们就来普及一下对于bfs与dfs拓扑排序的实现方式；</p> <p>1.bfs：</p> <p>bfs拓扑排序是常用的拓扑排序算法，这个算法是基于队列来实现的</p> <p>而实现的思想，则是基于无前驱的顶点优先和无后继的顶点优先</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/9b1125c0097f03889e710ce7da489e8c.jpg" alt="拓扑排序小结_在线工具"></p> <p>1.无前驱的顶点优先：</p> <p>以此图为例，</p> <p>实现的步骤主要是：</p> <p>（1）先找图中入度为0的点，作为起点放进队列，当然，这些点的先后顺序是无所谓的，主要是得有，如果找完一圈都没有发现图纸有度为0的点，那这个图就不是DAG图，不存在拓扑排序；</p> <p>（2）在找完图中入度为0的节点之后，我们弹出队首元素，并且将队首元素的邻居的度都减一，把度减为0的邻居放进队列</p> <p>（3）重复以上步骤，直到队列为空；</p> <p>拿上图来说，会输出acbd，这就是上图的拓扑序列；</p> <p>当然，如果队列空了，但是依旧是还有别的点没有进入队列，那这个图就不DAG，也就不存在脱坡序列；</p> <p>2.无后继顶点优先：</p> <p>将无前驱节点优先的执行反过来就是无后继顶点优先的执行。</p> <p>2.基于dfs的拓扑排序</p> <p>dfs是天然的拓扑排序思想的体现，dfs的原理就是一条路走到黑，一直搜素到最后，然后逐层回退，正是点与点的先后关系。</p> <p>一个DAG，如果只有一个点是0入度的，从这个点开始拓扑排序，返回的顺序是逆序的拓扑排序，</p> <p>因为递归返回的是最后的点，这里就没有后继点了，逐层回退，最后到起点</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220501/851a7aa1f0b199f49fd3d7eb07a61ee7.jpg" alt="拓扑排序小结_在线工具"></p> <p> </p> <p> 为了得到正序的拓扑序列，数据结构中有一个专门对付逆序的线性结构---那就是栈，用栈记录拓扑序列在输出就可以得到正确的拓扑序列；</p> <p>但是依旧是有一些细节问题：</p> <p>(1)应该以入度为0的点为起点开始DFS.如何找到它?需要找到它吗?如果有多个入度为0的点呢?<br />这几个问题其实并不用特别处理。想象有一个虚拟的点 v,，它单向连接到所有其他点。这个点就是图中唯一 的0入度点，图中所有其他的点都是它的下一层递归，而且它不会把原图变成环路。从这个虚拟点开始DFS就完成了拓扑排序。但运算的时候并不需要处理这个虚拟点，只要在主程序中把每个点轮流执行一 DFS可这样做相当于显式地道归了虚点的所有下一层点，</p> <p>(2)如果图不是DAG,能判断吗?<br />图不是DAG，说明图是有环图，不存在拓扑排序。(那么在递归的时候会出现回退边)<br />在程序中这样发现回退边:记录每个点的状态,如果dfs递归到某个点时发现它仍在前面的递归中没有处理完毕，说明存在回退边，不存在拓扑排序:</p> <p>还要一些杂项问题：</p> <p>输出字典序最小的拓扑排序；</p> <p>这种题目比如杭电1285和北大1270都有体现；</p> <p>解决这里问题，核心是在当前步骤，在所有入度为0的点中输出编号最小的，</p> <p>这里我们不用next_permutation();</p> <p>这里采用的是优先队列：</p> <p>在bfs拓扑排序中，把普通队列改为优先队列，放进入度为0的节点，每次输出最小编号........就是重复bfs拓扑排序的步骤啦</p> <p>题目实战：https://www.dotcpp.com/oj/problem1707.html</p> <p>这道题前面我已发博客：https://www.cnblogs.com/LQS-blog/p/16207985.html</p> <p>来个重量级的:</p> <p>https://www.acwing.com/problem/content/description/166/</p> <p>友情提示，这道题不太好做，慎入；</p> <p>这里只给出代码，今天很晚了，以后找时间专门出篇博客：</p> <p> </p> <p> </p> <div class="cnblogs_code"> <pre><span style="color: rgba(0, 128, 128, 1)"> 1</span> #include&lt;bits/stdc++.h&gt; <span style="color: rgba(0, 128, 128, 1)"> 2</span> <span style="color: rgba(0, 0, 255, 1)">using</span> <span style="color: rgba(0, 0, 255, 1)">namespace</span><span style="color: rgba(0, 0, 0, 1)"> std; </span><span style="color: rgba(0, 128, 128, 1)"> 3</span> <span style="color: rgba(0, 0, 255, 1)">const</span> <span style="color: rgba(0, 0, 255, 1)">int</span> num=<span style="color: rgba(128, 0, 128, 1)">30010</span><span style="color: rgba(0, 0, 0, 1)">;  </span><span style="color: rgba(0, 128, 128, 1)"> 4</span> queue&lt;<span style="color: rgba(0, 0, 255, 1)">int</span>&gt;<span style="color: rgba(0, 0, 0, 1)">q; </span><span style="color: rgba(0, 128, 128, 1)"> 5</span> <span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> n,m; </span><span style="color: rgba(0, 128, 128, 1)"> 6</span> vector&lt;<span style="color: rgba(0, 0, 255, 1)">int</span>&gt;edge[num];<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">存图</span> <span style="color: rgba(0, 128, 128, 1)"> 7</span> vector&lt;<span style="color: rgba(0, 0, 255, 1)">int</span>&gt;topo;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">拓扑序列</span> <span style="color: rgba(0, 128, 128, 1)"> 8</span> <span style="color: rgba(0, 0, 255, 1)">int</span> <span style="color: rgba(0, 0, 255, 1)">in</span>[num];<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">入度数组</span> <span style="color: rgba(0, 128, 128, 1)"> 9</span> bitset&lt;num&gt;f[num];<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">是标准库中的一个固定大小序列，其储存的数据只包含 0/1</span> <span style="color: rgba(0, 128, 128, 1)">10</span> <span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> main() </span><span style="color: rgba(0, 128, 128, 1)">11</span> <span style="color: rgba(0, 0, 0, 1)">{ </span><span style="color: rgba(0, 128, 128, 1)">12</span>     std::ios::sync_with_stdio(<span style="color: rgba(0, 0, 255, 1)">false</span><span style="color: rgba(0, 0, 0, 1)">); </span><span style="color: rgba(0, 128, 128, 1)">13</span>     cin&gt;&gt;n&gt;&gt;<span style="color: rgba(0, 0, 0, 1)">m; </span><span style="color: rgba(0, 128, 128, 1)">14</span>     <span style="color: rgba(0, 0, 255, 1)">for</span>(register <span style="color: rgba(0, 0, 255, 1)">int</span> i=<span style="color: rgba(128, 0, 128, 1)">0</span>;i&lt;m;i++)<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">常规存图入度操作</span> <span style="color: rgba(0, 128, 128, 1)">15</span> <span style="color: rgba(0, 0, 0, 1)">    { </span><span style="color: rgba(0, 128, 128, 1)">16</span>         <span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> a,b; </span><span style="color: rgba(0, 128, 128, 1)">17</span>         cin&gt;&gt;a&gt;&gt;<span style="color: rgba(0, 0, 0, 1)">b; </span><span style="color: rgba(0, 128, 128, 1)">18</span> <span style="color: rgba(0, 0, 0, 1)">        edge[a].push_back(b); </span><span style="color: rgba(0, 128, 128, 1)">19</span>         <span style="color: rgba(0, 0, 255, 1)">in</span>[b]++<span style="color: rgba(0, 0, 0, 1)">; </span><span style="color: rgba(0, 128, 128, 1)">20</span> <span style="color: rgba(0, 0, 0, 1)">    } </span><span style="color: rgba(0, 128, 128, 1)">21</span>     <span style="color: rgba(0, 0, 255, 1)">for</span>(register <span style="color: rgba(0, 0, 255, 1)">int</span> i=<span style="color: rgba(128, 0, 128, 1)">0</span>;i&lt;n;i++)<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">把入度为0的点入队</span> <span style="color: rgba(0, 128, 128, 1)">22</span> <span style="color: rgba(0, 0, 0, 1)">    { </span><span style="color: rgba(0, 128, 128, 1)">23</span>         <span style="color: rgba(0, 0, 255, 1)">if</span>(!<span style="color: rgba(0, 0, 255, 1)">in</span><span style="color: rgba(0, 0, 0, 1)">[i]) </span><span style="color: rgba(0, 128, 128, 1)">24</span> <span style="color: rgba(0, 0, 0, 1)">        q.push(i); </span><span style="color: rgba(0, 128, 128, 1)">25</span> <span style="color: rgba(0, 0, 0, 1)">    } </span><span style="color: rgba(0, 128, 128, 1)">26</span>     <span style="color: rgba(0, 0, 255, 1)">while</span>(!<span style="color: rgba(0, 0, 0, 1)">q.empty()) </span><span style="color: rgba(0, 128, 128, 1)">27</span> <span style="color: rgba(0, 0, 0, 1)">    { </span><span style="color: rgba(0, 128, 128, 1)">28</span>         <span style="color: rgba(0, 0, 255, 1)">int</span> x=q.front();<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">取队首</span> <span style="color: rgba(0, 128, 128, 1)">29</span> <span style="color: rgba(0, 0, 0, 1)">        q.pop(); </span><span style="color: rgba(0, 128, 128, 1)">30</span>         topo.push_back(x);<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">存入拓扑序列</span> <span style="color: rgba(0, 128, 128, 1)">31</span>         <span style="color: rgba(0, 0, 255, 1)">for</span>(register <span style="color: rgba(0, 0, 255, 1)">int</span> j=<span style="color: rgba(128, 0, 128, 1)">0</span>;j&lt;edge[x].size();j++)<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">找邻居</span> <span style="color: rgba(0, 128, 128, 1)">32</span> <span style="color: rgba(0, 0, 0, 1)">        { </span><span style="color: rgba(0, 128, 128, 1)">33</span>             <span style="color: rgba(0, 0, 255, 1)">int</span> y=<span style="color: rgba(0, 0, 0, 1)">edge[x][j]; </span><span style="color: rgba(0, 128, 128, 1)">34</span>             <span style="color: rgba(0, 0, 255, 1)">in</span>[y]--;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">度减1</span> <span style="color: rgba(0, 128, 128, 1)">35</span>             <span style="color: rgba(0, 0, 255, 1)">if</span>(!<span style="color: rgba(0, 0, 255, 1)">in</span>[y])<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">找邻居度为0的节点</span> <span style="color: rgba(0, 128, 128, 1)">36</span> <span style="color: rgba(0, 0, 0, 1)">            q.push(y);  </span><span style="color: rgba(0, 128, 128, 1)">37</span> <span style="color: rgba(0, 0, 0, 1)">        } </span><span style="color: rgba(0, 128, 128, 1)">38</span> <span style="color: rgba(0, 0, 0, 1)">    } </span><span style="color: rgba(0, 128, 128, 1)">39</span>     <span style="color: rgba(0, 0, 255, 1)">for</span>(register <span style="color: rgba(0, 0, 255, 1)">int</span> i=topo.size()-<span style="color: rgba(128, 0, 128, 1)">1</span>;i&gt;=<span style="color: rgba(128, 0, 128, 1)">0</span>;i--<span style="color: rgba(0, 0, 0, 1)">) </span><span style="color: rgba(0, 128, 128, 1)">40</span> <span style="color: rgba(0, 0, 0, 1)">    { </span><span style="color: rgba(0, 128, 128, 1)">41</span>         <span style="color: rgba(0, 0, 255, 1)">int</span> x=<span style="color: rgba(0, 0, 0, 1)">topo[i]; </span><span style="color: rgba(0, 128, 128, 1)">42</span>         f[x].reset();<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">置所以位为0</span> <span style="color: rgba(0, 128, 128, 1)">43</span>         f[x][x]=<span style="color: rgba(128, 0, 128, 1)">1</span>; <span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> x这个点可以到达自己   f[x][x] =表示从 x出发的点，</span> <span style="color: rgba(0, 128, 128, 1)">44</span>         <span style="color: rgba(0, 0, 255, 1)">for</span>(register <span style="color: rgba(0, 0, 255, 1)">int</span> k=<span style="color: rgba(128, 0, 128, 1)">0</span>;k&lt;edge[x].size();k++<span style="color: rgba(0, 0, 0, 1)">) </span><span style="color: rgba(0, 128, 128, 1)">45</span> <span style="color: rgba(0, 0, 0, 1)">        { </span><span style="color: rgba(0, 128, 128, 1)">46</span>             f[x]|=f[edge[x][k]];<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">x这个点可以到达的点的数量= {x} U {y1} U {y2}..{yn}</span> <span style="color: rgba(0, 128, 128, 1)">47</span> <span style="color: rgba(0, 0, 0, 1)">        } </span><span style="color: rgba(0, 128, 128, 1)">48</span> <span style="color: rgba(0, 0, 0, 1)">    } </span><span style="color: rgba(0, 128, 128, 1)">49</span>     <span style="color: rgba(0, 0, 255, 1)">for</span>(register <span style="color: rgba(0, 0, 255, 1)">int</span> i=<span style="color: rgba(128, 0, 128, 1)">1</span>;i&lt;=n;i++<span style="color: rgba(0, 0, 0, 1)">) </span><span style="color: rgba(0, 128, 128, 1)">50</span>     cout&lt;&lt;f[i].count()&lt;&lt;endl;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> f[i].count() 返回f[i] 中 1的个数</span> <span style="color: rgba(0, 128, 128, 1)">51</span>     <span style="color: rgba(0, 0, 255, 1)">return</span> <span style="color: rgba(128, 0, 128, 1)">0</span><span style="color: rgba(0, 0, 0, 1)">; </span><span style="color: rgba(0, 128, 128, 1)">52</span> }</pre> </div> <p> </p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-80899.htm">动物疫苗的使用方法及注意事项有哪些呢 动物疫苗的使用方法及注意事项有哪些呢英语</a></p>
+                                        <p>下一个：<a href="/news/article-81573.htm">动物疫苗现状如何 动物疫苗现状如何分析</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-80180.htm" title="宠物免费领养网站（宠物免费领养网站）">宠物免费领养网站（宠物免费领养网站）</a></li>
+                        <li class="py-2"><a href="/news/article-56227.htm" title="mysql做生日日期字段的用到的类型_MySQL 日期类型函数及使用">mysql做生日日期字段的用到的类型_MySQL 日期类型函数及使用</a></li>
+                        <li class="py-2"><a href="/news/article-68173.htm" title="linux下运行jsp（Linux下tomcat安装与配置）">linux下运行jsp（Linux下tomcat安装与配置）</a></li>
+                        <li class="py-2"><a href="/news/article-51373.htm" title="动物打防疫针运输安全吗（动物打防疫针运输安全吗现在）">动物打防疫针运输安全吗（动物打防疫针运输安全吗现在）</a></li>
+                        <li class="py-2"><a href="/news/article-40834.htm" title="被宠物猫抓出了一点血有事吗（被宠物猫抓一点点血没事吧）">被宠物猫抓出了一点血有事吗（被宠物猫抓一点点血没事吧）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-3-free-node-subscribe-links.htm" title="3月3日每日最新机场订阅→18.1M/S|免费节点Shadowrocket/V2ray/SSR/Clash链接地址分享">3月3日每日最新机场订阅→18.1M/S|免费节点Shadowrocket/V2ray/SSR/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-8-free-high-speed-nodes.htm" title="2月8日每日最新机场订阅→22.5M/S|免费节点Clash/V2ray/Shadowrocket/SSR链接地址分享">2月8日每日最新机场订阅→22.5M/S|免费节点Clash/V2ray/Shadowrocket/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-node-share-links.htm" title="1月18日每日最新机场订阅→20.9M/S|免费节点Shadowrocket/V2ray/Clash/SSR链接地址分享">1月18日每日最新机场订阅→20.9M/S|免费节点Shadowrocket/V2ray/Clash/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-78826.htm" title="动物疫苗新闻稿件（动物疫苗新闻稿件标题）">动物疫苗新闻稿件（动物疫苗新闻稿件标题）</a></li>
+                        <li class="py-2"><a href="/news/article-38372.htm" title="动物疫苗一般多少钱打一针啊视频（动物疫苗价格查询）">动物疫苗一般多少钱打一针啊视频（动物疫苗价格查询）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">81</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
