@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-85136.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kafka开机自启动配置</title>
+        <meta name="description" content="Centos7 部署kafka kafka开机自启动配置 把zookeeper和kafka配置成开机自启动，主要是配置服务文件（里边有服务的描述、启动顺序、服务类型、启动指令、停止指令等等），系统服务" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-85136.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="kafka开机自启动配置" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/8d67d6a7bd5b99658b08a2aefb0804ae.webp" />
+        <meta property="og:release_date" content="2025-03-31T08:39:35" />
+    <meta property="og:updated_time" content="2025-03-31T08:39:35" />
+        <meta property="og:description" content="Centos7 部署kafka kafka开机自启动配置 把zookeeper和kafka配置成开机自启动，主要是配置服务文件（里边有服务的描述、启动顺序、服务类型、启动指令、停止指令等等），系统服务" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="kafka开机自启动配置">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>kafka开机自启动配置</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h2><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/fengkang511/article/details/107737494"  rel="nofollow">Centos7 部署kafka</a></h2> <h2><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/fengkang511/article/details/108187169"  rel="nofollow">kafka开机自启动配置</a></h2> <p>把zookeeper和kafka配置成开机自启动，主要是配置服务文件（里边有服务的描述、启动顺序、服务类型、启动指令、停止指令等等），系统服务的配置文件在“/usr/lib/systemd/system/”目录里边：</p> <p>添加zookeeper服务的配置文件，配置内容如下</p> <pre><code>vim /usr/lib/systemd/system/zookeeper.service</code></pre> <p><img fetchpriority="high" decoding="async" alt="" height="291" src="http://img.555519.xyz/uploads3/20220823/04fdd2d5a67e81d9e83aef69d53a6ad9.jpg"></p> <p>&nbsp;添加kafka服务的配置文件，配置内容如下（也可以偷个懒，复制zookeeper的配置文件，简单修改几个地方就行）</p> <pre><code>vim /usr/lib/systemd/system/kafka.service</code></pre> <p><img decoding="async" alt="" height="288" src="http://img.555519.xyz/uploads3/20220823/91c25d97c4593df62d1c1709f971b03a.jpg"></p> <p><strong>注意环境变量中java路径（此处是本机的java的安装目录），然后kafka在keeper后启动</strong></p> <p>刷新配置文件</p> <pre><code>systemctl daemon-reload</code></pre> <p>zookeeper启动，并配置开机启动</p> <pre><code>#启动服务 systemctl start zookeeper #设置开机启动 sysetmctl enable zookeeper</code></pre> <p>查看zookeeper的运行状态</p> <pre><code>systemctl status zookeeper</code></pre> <p><img decoding="async" alt="" height="304" src="http://img.555519.xyz/uploads3/20220823/b153ba07ca94b66d0ccdfc06f3a0392a.jpg"></p> <p>kafka启动，配置开机启动</p> <pre><code>#启动kafka服务 systemctl start kafka #设置kafka开机自启动 systemctl enable kafka</code></pre> <p>查看kafka的运行状态</p> <pre><code>systemctl status kafka</code></pre> <p><img loading="lazy" decoding="async" alt="" height="305" src="http://img.555519.xyz/uploads3/20220823/4c354002317fcde7412bddc31ea34c6b.jpg"></p> <p>使用jps指令查看zookeeper和kafka的进程状态</p> <p><img loading="lazy" decoding="async" alt="" height="68" src="http://img.555519.xyz/uploads3/20220823/49fa39aa623e9c0f24a76f7de060c673.jpg"></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-84411.htm">动物疫苗板块有哪些（利好消息频传,这些动物疫苗股值得关注）</a></p>
+                                        <p>下一个：<a href="/news/article-85137.htm">三国杀有限定技的武将有谁（三国杀里的限定技能用几次）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-78825.htm" title="动物疫苗接种方法及注意事项视频教程大全图片（动物疫苗怎么注射）">动物疫苗接种方法及注意事项视频教程大全图片（动物疫苗怎么注射）</a></li>
+                        <li class="py-2"><a href="/news/article-79512.htm" title="宠物粮食店铺图片大全大图（宠物粮食店铺图片大全大图下载）">宠物粮食店铺图片大全大图（宠物粮食店铺图片大全大图下载）</a></li>
+                        <li class="py-2"><a href="/news/article-54028.htm" title="天津天照犬业有限公司电话地址（天津天照犬业有限公司电话地址）">天津天照犬业有限公司电话地址（天津天照犬业有限公司电话地址）</a></li>
+                        <li class="py-2"><a href="/news/article-83698.htm" title="疫苗玻璃瓶回收（疫苗瓶子回收）">疫苗玻璃瓶回收（疫苗瓶子回收）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-26-free-node-subscribe.htm" title="3月26日每日最新机场订阅→21.6M/S|免费节点SSR/Shadowrocket/V2ray/Clash链接地址分享">3月26日每日最新机场订阅→21.6M/S|免费节点SSR/Shadowrocket/V2ray/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-40834.htm" title="被宠物猫抓出了一点血有事吗（被宠物猫抓一点点血没事吧）">被宠物猫抓出了一点血有事吗（被宠物猫抓一点点血没事吧）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-node-share.htm" title="2月19日每日最新机场订阅→19.4M/S|免费节点Shadowrocket/Clash/SSR/V2ray链接地址分享">2月19日每日最新机场订阅→19.4M/S|免费节点Shadowrocket/Clash/SSR/V2ray链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-12-free-node-subscribe-links.htm" title="2月12日每日最新机场订阅→20M/S|免费节点Shadowrocket/Clash/SSR/V2ray链接地址分享">2月12日每日最新机场订阅→20M/S|免费节点Shadowrocket/Clash/SSR/V2ray链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-70746.htm" title="Vue项目中添加一些独立的静态资源（内嵌独立静态页面等）">Vue项目中添加一些独立的静态资源（内嵌独立静态页面等）</a></li>
+                        <li class="py-2"><a href="/news/article-60219.htm" title="动物诊疗许可证需要的材料和手续（动物诊疗许可证需要的材料和手续有哪些）">动物诊疗许可证需要的材料和手续（动物诊疗许可证需要的材料和手续有哪些）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+            <p>
+                <a href="/">首页</a> |
+                <a href="/free-node/">免费节点</a> |
+                <a href="/news/">新闻资讯</a> |
+                <a href="/about-us.htm">关于我们</a> |
+                <a href="/disclaimer.htm">免责申明</a> |
+                <a href="/privacy.htm">隐私申明</a> |
+                <a href="/sitemap.xml">网站地图</a>
+            </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
