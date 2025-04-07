@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-88738.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>windows配置kubectl访问k8s集群</title>
+        <meta name="description" content="Kubernets官网有各系统的安装教程：https://kubernetes.io/zh/docs/tasks/tools/ Windows下安装kubectl   下载kubectl.exe，链接" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-88738.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="windows配置kubectl访问k8s集群" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/253352ea5161b569846edfcc6423bfa1.webp" />
+        <meta property="og:release_date" content="2025-04-05T08:16:47" />
+    <meta property="og:updated_time" content="2025-04-05T08:16:47" />
+        <meta property="og:description" content="Kubernets官网有各系统的安装教程：https://kubernetes.io/zh/docs/tasks/tools/ Windows下安装kubectl   下载kubectl.exe，链接" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="windows配置kubectl访问k8s集群">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>windows配置kubectl访问k8s集群</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-tomorrow-night"> <p><code>Kubernets</code>官网有各系统的安装教程：<code>https://kubernetes.io/zh/docs/tasks/tools/</code></p> <p><code>Windows</code>下安装<code>kubectl</code></p> <ol> <li> <p>下载<code>kubectl.exe</code>，链接中的v1.18.5可以修改为其他版本</p> <pre><code>https://storage.googleapis.com/kubernetes-release/release/v1.18.5/bin/windows/amd64/kubectl.exe</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/ea09e5db8234fa26c1d159cbb921fbef.jpg" alt="windows配置kubectl访问k8s集群"></p> </li> <li> <p>配置<code>PATH</code><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/1c351829f43bd4ede62cc47a0f8509c6.jpg" alt="windows配置kubectl访问k8s集群"></p> </li> <li> <p>检查安装</p> <pre><code>D:\software\dev\k8s&gt;kubectl version Client Version: version.Info{Major:"1", Minor:"18", GitVersion:"v1.18.5", GitCommit:"e6503f8d8f769ace2f338794c914a96fc335df0f", GitTreeState:"clean", BuildDate:"2020-06-26T03:47:41Z", GoVersion:"go1.13.9", Compiler:"gc", Platform:"windows/amd64"} Unable to connect to the server: dial tcp [::1]:8080: connectex: No connection could be made because the target machine actively refused it.</code></pre> </li> <li> <p><code>cmd</code>新建<code>.kube</code>文件夹</p> <p>在<code>C:\Users\Administrator</code>或者其他用户<code>C:\Users\80022319</code>下使用命令行新建<code>.kube</code>文件夹，<code>windows</code>不允许邮件新建以<code>.</code>开头的文件夹，只能用命令行新建</p> <pre><code>md .kube</code></pre> </li> <li> <p>在<code>.kube</code>下新建连接<code>k8s</code>集群的配置文件<code>config</code></p> <p>配置文件的内容，可以直接从你们的服务器上copy，例如某服务器可以连接k8s集群，这台服务器一定安装了<code>kubectl</code>，通过<code>cd ~ &amp;&amp; ls -a | grep .kube</code>查看是否有这个文件夹，然后拷贝<code>config</code>文件。或者让你们的运维帮你搞一下配置<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/f2a05022bdcf1ea29c02b2d70d336e95.jpg" alt="windows配置kubectl访问k8s集群"><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220609/584a6609e0820036b5076077624ac064.jpg" alt="windows配置kubectl访问k8s集群"></p> </li> <li> <p>验证连接<code>k8s</code>集群</p> <pre><code>D:\software\dev\k8s&gt;kubectl version Client Version: version.Info{Major:"1", Minor:"18", GitVersion:"v1.18.5", GitCommit:"e6503f8d8f769ace2f338794c914a96fc335df0f", GitTreeState:"clean", BuildDate:"2020-06-26T03:47:41Z", GoVersion:"go1.13.9", Compiler:"gc", Platform:"windows/amd64"} Server Version: version.Info{Major:"1", Minor:"16", GitVersion:"v1.16.2", GitCommit:"c97fe5036ef3df2967d086711e6c0c405941e14b", GitTreeState:"clean", BuildDate:"2019-10-15T19:09:08Z", GoVersion:"go1.12.10", Compiler:"gc", Platform:"linux/amd64"}</code></pre> </li> </ol> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-88017.htm">零食一手货源厂家直销（两元店货源从哪里进货）</a></p>
+                                        <p>下一个：<a href="/news/article-88739.htm">动物疫苗多少钱一只啊图片及价格（动物疫苗的作用）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-67515.htm" title="小猫要跟主人睡一个房间吗（小猫咪一定要和主人在一个房间）">小猫要跟主人睡一个房间吗（小猫咪一定要和主人在一个房间）</a></li>
+                        <li class="py-2"><a href="/news/article-79512.htm" title="宠物粮食店铺图片大全大图（宠物粮食店铺图片大全大图下载）">宠物粮食店铺图片大全大图（宠物粮食店铺图片大全大图下载）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-node-share.htm" title="3月10日每日最新机场订阅→19.4M/S|免费节点Shadowrocket/SSR/V2ray/Clash链接地址分享">3月10日每日最新机场订阅→19.4M/S|免费节点Shadowrocket/SSR/V2ray/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-74069.htm" title="仓鼠去宠物医院看病贵吗（仓鼠去宠物医院看病贵吗）">仓鼠去宠物医院看病贵吗（仓鼠去宠物医院看病贵吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-1-node-share-links.htm" title="4月1日每日最新机场订阅→21.5M/S|免费节点V2ray/SSR/Shadowrocket/Clash链接地址分享">4月1日每日最新机场订阅→21.5M/S|免费节点V2ray/SSR/Shadowrocket/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-free-high-speed-nodes.htm" title="3月7日每日最新机场订阅→22.4M/S|免费节点Shadowrocket/V2ray/SSR/Clash链接地址分享">3月7日每日最新机场订阅→22.4M/S|免费节点Shadowrocket/V2ray/SSR/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-5-node-share-links.htm" title="3月5日每日最新机场订阅→20.8M/S|免费节点V2ray/SSR/Shadowrocket/Clash链接地址分享">3月5日每日最新机场订阅→20.8M/S|免费节点V2ray/SSR/Shadowrocket/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-90229.htm" title="领养宠物合同协议书的骗局怎么写的（宠物领养合同有效力吗）">领养宠物合同协议书的骗局怎么写的（宠物领养合同有效力吗）</a></li>
+                        <li class="py-2"><a href="/news/article-82995.htm" title="动物防疫方针政策解读（动物防疫实施办法）">动物防疫方针政策解读（动物防疫实施办法）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-free-node-subscribe-links.htm" title="3月17日每日最新机场订阅→21.4M/S|免费节点Shadowrocket/Clash/V2ray/SSR链接地址分享">3月17日每日最新机场订阅→21.4M/S|免费节点Shadowrocket/Clash/V2ray/SSR链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
