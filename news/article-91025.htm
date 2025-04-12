@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-91025.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vue跳转页面打开新窗口,并携带与接收参数方式_vue.js_</title>
+        <meta name="description" content="目录  1、携带普通类型参数 2、携带复杂类型参数 vue页面跳转并传参的八种方式  方法一 方法二 方法三 方法四 方法五 方法六 方法七 方法八     1、携带普通类型参数 字符串、数字等。 p" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-91025.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="vue跳转页面打开新窗口,并携带与接收参数方式_vue.js_" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/3e06145ef3df4476540f41e96f63345f.webp" />
+        <meta property="og:release_date" content="2025-04-08T09:53:22" />
+    <meta property="og:updated_time" content="2025-04-08T09:53:22" />
+        <meta property="og:description" content="目录  1、携带普通类型参数 2、携带复杂类型参数 vue页面跳转并传参的八种方式  方法一 方法二 方法三 方法四 方法五 方法六 方法七 方法八     1、携带普通类型参数 字符串、数字等。 p" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue跳转页面打开新窗口,并携带与接收参数方式_vue.js_">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>vue跳转页面打开新窗口,并携带与接收参数方式_vue.js_</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">1、携带普通类型参数</a></li> <li><a href="#_label1" rel="nofollow">2、携带复杂类型参数</a></li> <li><a href="#_label2" rel="nofollow">vue页面跳转并传参的八种方式</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_2_0" rel="nofollow">方法一</a></li> <li><a href="#_lab2_2_1" rel="nofollow">方法二</a></li> <li><a href="#_lab2_2_2" rel="nofollow">方法三</a></li> <li><a href="#_lab2_2_3" rel="nofollow">方法四</a></li> <li><a href="#_lab2_2_4" rel="nofollow">方法五</a></li> <li><a href="#_lab2_2_5" rel="nofollow">方法六</a></li> <li><a href="#_lab2_2_6" rel="nofollow">方法七</a></li> <li><a href="#_lab2_2_7" rel="nofollow">方法八</a></li> </ul> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>1、携带普通类型参数</h2> <p>字符串、数字等。</p> <p><code>path</code>：要跳转新页面的路由链接</p> <p><code>query</code>：要携带的参数</p> <div class="ay1code"> <pre class="brush:js;">let pathInfo = this.$router.resolve({    path:'/product_detail',       query:{           productId:'11'       }   })   window.open(pathInfo.href, '_blank');</pre> </div> <p>新页面的参数接收：</p> <div class="ay1code"> <pre class="brush:js;">this.productId = this.$route.query.productId</pre> </div> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>2、携带复杂类型参数</h2> <p>对象、数组等，通过JSON转换进行传递。</p> <div class="ay1code"> <pre class="brush:js;">let pathInfo = this.$router.resolve({     path:'/product_detail',       query:{           data:{name:'张三'}       }   })   window.open(pathInfo.href, '_blank');</pre> </div> <p>新页面的参数接收：</p> <div class="ay1code"> <pre class="brush:js;">console.log(this.$route.query.data)</pre> </div> <p class="maodian"><a name="_label2" rel="nofollow"></a></p> <h2>vue页面跳转并传参的八种方式</h2> <p>我们知道，在vue中每个页面都需要在路由中声明，就是在router/index.js中写下面代码：</p> <div class="ay1code"> <pre class="brush:js;">import Vue from 'vue'  import Router from 'vue-router'  import Test from "../components/Test";  Vue.use(Router)  export default new Router({    mode: 'history',    routes: [            {                path: '/t',                name: 'Test',                component: Test,                hidden:true              },          ]      })</pre> </div> <p>实现页面跳转并传参有多种方式：</p> <p class="maodian"><a name="_lab2_2_0" rel="nofollow"></a></p> <h3>方法一</h3> <p>在template中可以使用&lt;router-link&gt;标签实现跳转，跳转的路径是http://localhost:8080/t?index=id，如下：</p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;router-link to="/t?index=1"&gt;       &lt;button class="btn btn-default"&gt;点击跳转&lt;/button&gt;  &lt;/router-link&gt;</pre> </div> <p>只需要点击按钮就可以实现跳转，不需要写js代码，需要传递参数的话只需要/t?index=1即可，这样的话跳转的页面获取参数通过window.location.href能够获取到完整的url,然后截取参数。也可以通过下面代码获取参数</p> <div class="ay1code"> <pre class="brush:js;">this.$route.query.index</pre> </div> <p class="maodian"><a name="_lab2_2_1" rel="nofollow"></a></p> <h3>方法二</h3> <p>跳转的路径是http://localhost:8080/t?index=id</p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;router-link :to="{path:'/t',query: {index: 1}}"&gt;       &lt;button class="btn btn-default"&gt;点击跳转&lt;/button&gt;  &lt;/router-link&gt;</pre> </div> <p>其中需要注意，这里的to前面一定要加冒号，path的值要和上面路由定义的值一致，传参用query，里面是参数字典。</p> <p>接收参数：</p> <div class="ay1code"> <pre class="brush:js;">this.$route.query.index</pre> </div> <p class="maodian"><a name="_lab2_2_2" rel="nofollow"></a></p> <h3>方法三</h3> <p>命名路由的方式：</p> <p>跳转的路径是http://localhost:8080/t?index=id</p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;router-link :to="{name:'Test',params: {index: 1}}"&gt;       &lt;button class="btn btn-default"&gt;点击跳转&lt;/button&gt;  &lt;/router-link&gt;</pre> </div> <p>注意这里的name也要和router/index.js中声明的name值一致，并且传参使用params，和name配对的是params，和path配对的是query。</p> <p>接收参数：</p> <div class="ay1code"> <pre class="brush:js;">this.$route.params.index  </pre> </div> <p class="maodian"><a name="_lab2_2_3" rel="nofollow"></a></p> <h3>方法四</h3> <p>跳转的路径是http://localhost:8080/t/id</p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;router-link:to="'/test/'+1"&gt;       &lt;button class="btn btn-default"&gt;点击跳转&lt;/button&gt;  &lt;/router-link&gt;</pre> </div> <p>这时的路由也需要更为为下面的形式：</p> <div class="ay1code"> <pre class="brush:js;">routes: [            {                path: '/t/:index',                name: 'Test',                component: Test,                hidden:true              },          ]</pre> </div> <p>接收参数：</p> <div class="ay1code"> <pre class="brush:js;">this.$route.params.index</pre> </div> <p class="maodian"><a name="_lab2_2_4" rel="nofollow"></a></p> <h3>方法五</h3> <p>上面四种方法都是在html中实现的跳转，还有另外对应的在js中实现的跳转并传参的方法，代码如下：</p> <div class="ay1code"> <pre class="brush:js;">&lt;template&gt;  &lt;button @click = "func()"&gt;跳转&lt;/button&gt;  &lt;/template&gt;  &lt;script&gt;      export default{          methods:{              func (){                  this.$router.push({path: '/t?index=1'});              }          }      }  &lt;/script&gt;</pre> </div> <p>接收参数依然使用</p> <div class="ay1code"> <pre class="brush:js;">this.$route.query.index</pre> </div> <p class="maodian"><a name="_lab2_2_5" rel="nofollow"></a></p> <h3>方法六</h3> <div class="ay1code"> <pre class="brush:js;">&lt;template&gt;  &lt;button @click = "func()"&gt;跳转&lt;/button&gt;  &lt;/template&gt;  &lt;script&gt;      export default{          methods:{              func (){                  this.$router.push({path: '/t',query:{ index:'1'}});              }          }      }  &lt;/script&gt;  </pre> </div> <p>接收参数依然使用</p> <div class="ay1code"> <pre class="brush:js;">this.$route.query.index</pre> </div> <p class="maodian"><a name="_lab2_2_6" rel="nofollow"></a></p> <h3>方法七</h3> <div class="ay1code"> <pre class="brush:js;">&lt;template&gt;  &lt;button @click = "func()"&gt;跳转&lt;/button&gt;  &lt;/template&gt;  &lt;script&gt;      export default{          methods:{              func (){                  this.$router.push({path: '/t/index'});              }          }      }  &lt;/script&gt;  </pre> </div> <p>接收参数依然使用</p> <div class="ay1code"> <pre class="brush:js;">this.$route.query.index</pre> </div> <p class="maodian"><a name="_lab2_2_7" rel="nofollow"></a></p> <h3>方法八</h3> <div class="ay1code"> <pre class="brush:js;">&lt;template&gt;  &lt;button @click = "func()"&gt;跳转&lt;/button&gt;  &lt;/template&gt;  &lt;script&gt;      export default{          methods:{              func (){                  this.$router.push({name: 'Test',params:{ index:'1'}});              }          }      }  &lt;/script&gt;</pre> </div> <p>接收参数依然使用</p> <div class="ay1code"> <pre class="brush:js;">this.$route.params.index  </pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-91024.htm">C++ 类成员指针</a></p>
+                                        <p>下一个：<a href="/news/article-91685.htm">宠物零食加工流程 宠物零食加工流程图</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-80180.htm" title="宠物免费领养网站（宠物免费领养网站）">宠物免费领养网站（宠物免费领养网站）</a></li>
+                        <li class="py-2"><a href="/news/article-82995.htm" title="动物防疫方针政策解读（动物防疫实施办法）">动物防疫方针政策解读（动物防疫实施办法）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-22-free-subscribe-node.htm" title="3月22日每日最新机场订阅→19.9M/S|免费节点Shadowrocket/Clash/V2ray/SSR链接地址分享">3月22日每日最新机场订阅→19.9M/S|免费节点Shadowrocket/Clash/V2ray/SSR链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-71413.htm" title="克隆Gitee代码报错Unable to connect to gitee.com: gitee.com[0: 180.97.125.228]: errno=Unknown error">克隆Gitee代码报错Unable to connect to gitee.com: gitee.com[0: 180.97.125.228]: errno=Unknown error</a></li>
+                        <li class="py-2"><a href="/news/article-70747.htm" title="动物疫苗企业排名榜前十名 动物疫苗企业排名榜前十名有哪些">动物疫苗企业排名榜前十名 动物疫苗企业排名榜前十名有哪些</a></li>
+                        <li class="py-2"><a href="/news/article-67514.htm" title="修改docker容器端口映射的方法">修改docker容器端口映射的方法</a></li>
+                        <li class="py-2"><a href="/news/article-78125.htm" title="太原宠物领养公司（太原宠物领养公司排名）">太原宠物领养公司（太原宠物领养公司排名）</a></li>
+                        <li class="py-2"><a href="/news/article-91025.htm" title="vue跳转页面打开新窗口,并携带与接收参数方式_vue.js_">vue跳转页面打开新窗口,并携带与接收参数方式_vue.js_</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-7-node-share.htm" title="4月7日每日最新机场订阅→20.1M/S|免费节点SSR/V2ray/Shadowrocket/Clash链接地址分享">4月7日每日最新机场订阅→20.1M/S|免费节点SSR/V2ray/Shadowrocket/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-72063.htm" title="Java集合类型遍历和排序">Java集合类型遍历和排序</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

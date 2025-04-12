@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="canonical" href="https://v2rayunode.github.io/news/article-91024.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C++ 类成员指针</title>
+        <meta name="description" content="C++的类成员指针是一种奇葩的指针。 假设现在我们要表示一个三维的点，现在有两种定义方式： struct point1{ 	int x, y, z; };  struct point2{ 	int c" />
+        <link rel="icon" href="/assets/website/img/v2rayunode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="V2rayU Node免费梯子节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://v2rayunode.github.io/news/article-91024.htm" />
+    <meta property="og:site_name" content="V2rayU Node免费梯子节点分享官网" />
+    <meta property="og:title" content="C++ 类成员指针" />
+    <meta property="og:image" content="https://v2rayunode.github.io/uploads/20241222-1/aa3ddc9bff6fda25db17c202e775086f.webp" />
+        <meta property="og:release_date" content="2025-04-08T09:53:22" />
+    <meta property="og:updated_time" content="2025-04-08T09:53:22" />
+        <meta property="og:description" content="C++的类成员指针是一种奇葩的指针。 假设现在我们要表示一个三维的点，现在有两种定义方式： struct point1{ 	int x, y, z; };  struct point2{ 	int c" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C++ 类成员指针">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/v2rayunode/nivo-lightbox/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4M01FEXJ2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H4M01FEXJ2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" data-page="detail">
+        <!-- Navigation
+        ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <a class="navbar-brand" href="/">
+                                        <span>V2rayU Node</span>
+                                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                    </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="intro category">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 intro-text">
+                            <h1>C++ 类成员指针</h1>
+                            <p>
+                                <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="V2ray X节点订阅官网" data-url="https://v2rayx.github.io">
+                  				  				  				<p>C++的类成员指针是一种奇葩的指针。</p> <p>假设现在我们要表示一个三维的点，现在有两种定义方式：</p> <pre><code class="language-cpp">struct point1{ 	int x, y, z; };  struct point2{ 	int c[3]; };</code></pre> <p>第一种的优点是更直观，但第二种可以方便的用for遍历三个属性。最终我选择了第一种，但是我还想弄一个遍历功能怎么办？这个时候类成员指针就排上用场了，我们可以创建一个“指向point中具体成员的指针”。</p> <pre><code class="language-cpp">int A:: *member = &amp;A::x;</code></pre> <p>让member指针指向A中的成员x，且类型是int，此时我们就可以通过member来访问x：</p> <pre><code class="language-cpp">point1 tmp{4, 5, 6}; cout &lt;&lt; tmp.(*member); //把member解引用，得到tmp::x，表示要访问x</code></pre> <p>所以我们定义一个数组，就可以迭代访问类里的各种int属性了</p> <pre><code class="language-cpp">int A:: *member [] = {&amp;A::x, &amp;A::y, &amp;A::z}; for (int i = 0; i &lt; 3; ++i) 	cout &lt;&lt; tmp.(*member[i]);</code></pre> <p>这个用途也可以放到成员函数上，构建一个函数列表，顺序调用。</p> <p>这么个指针的行为跟一般的指针显然不一样，它不保存地址，而是保存一个“偏移量”，从对象地址开头到对象成员的偏移量。这玩意其实可以输出：</p> <pre><code class="language-cpp">struct A{ 	int a, b, c; };  main() { 	printf("%d%d%d", &amp;A::a, &amp;A::b, &amp;A::c); //! 输入为0, 4, 8 	//! 当然这玩意类型不是int，printf直接将他以int解析输出了，所以cout达不到效果 }</code></pre> <p>这样类成员指针的意义就很明显了，假设一个A的对象t，那么t的地址<code>&amp;t</code>和a的地址<code>&amp;(t.a)</code>是相等的，而<code>&amp;(t.b)</code>要多出来4，<code>&amp;(t.c)</code>又要多出来4。每个对象的内存构造都是一样的，这个类成员指针就是获取每个成员相对于头地址的偏移量，这样当我使用<code>t.*member</code>编译器就知道是头地址+4处的变量，并且是个int。</p> <p>不过成员函数又不太一样了。不同对象的成员函数只有同一份程序短代码。C++不能用<code>&amp;(t.fun)</code>的方式获取对象的成员函数的地址，要用取<code>&amp;A::fun</code>得到函数的地址。这个当然是真地址了。</p> <p>类成员指针可以用于<code>static</code>吗？显然不行，static成员单独存放，与类本身无关，取<code>&amp;A::staticmember</code>得到的就是这个变量的正经地址。那可以用于<code>virtual function</code>吗？答案是可以，但是虚函数的地址无法确定，所以又变成了储存偏移量，实际上储存的是函数在虚表中的索引值。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-90229.htm">领养宠物合同协议书的骗局怎么写的（宠物领养合同有效力吗）</a></p>
+                                        <p>下一个：<a href="/news/article-91025.htm">vue跳转页面打开新窗口,并携带与接收参数方式_vue.js_</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-77447.htm" title="公务员国考什么时候报名（公务员国考什么时候考试时间）">公务员国考什么时候报名（公务员国考什么时候考试时间）</a></li>
+                        <li class="py-2"><a href="/news/article-74068.htm" title="兽用疫苗真伪查询（兽用疫苗批号查询）">兽用疫苗真伪查询（兽用疫苗批号查询）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-node-share.htm" title="3月30日每日最新机场订阅→18.7M/S|免费节点SSR/V2ray/Clash/Shadowrocket链接地址分享">3月30日每日最新机场订阅→18.7M/S|免费节点SSR/V2ray/Clash/Shadowrocket链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-72063.htm" title="Java集合类型遍历和排序">Java集合类型遍历和排序</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-node-share.htm" title="3月13日每日最新机场订阅→20.8M/S|免费节点SSR/V2ray/Shadowrocket/Clash链接地址分享">3月13日每日最新机场订阅→20.8M/S|免费节点SSR/V2ray/Shadowrocket/Clash链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-68805.htm" title="React + TypeScript实战（一）设定事件处理函数的参数类型">React + TypeScript实战（一）设定事件处理函数的参数类型</a></li>
+                        <li class="py-2"><a href="/news/article-92402.htm" title="pymysql增删改查之insert操作">pymysql增删改查之insert操作</a></li>
+                        <li class="py-2"><a href="/news/article-80180.htm" title="宠物免费领养网站（宠物免费领养网站）">宠物免费领养网站（宠物免费领养网站）</a></li>
+                        <li class="py-2"><a href="/news/article-67515.htm" title="小猫要跟主人睡一个房间吗（小猫咪一定要和主人在一个房间）">小猫要跟主人睡一个房间吗（小猫咪一定要和主人在一个房间）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-free-high-speed-nodes.htm" title="3月20日每日最新机场订阅→21.2M/S|免费节点Shadowrocket/SSR/Clash/V2ray链接地址分享">3月20日每日最新机场订阅→21.2M/S|免费节点Shadowrocket/SSR/Clash/V2ray链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Footer Section -->
+    <div id="footer">
+        <div class="container text-center">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/contact_me.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/v2rayunode/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
