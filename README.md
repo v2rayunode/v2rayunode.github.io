@@ -1,4 +1,4 @@
-# 11月20日每日最新机场订阅→21.1M/S|免费节点V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点链接地址分享  更新时间 2025-11-20 08:18:21
+# 11月29日每日最新机场订阅→22.2M/S|免费节点Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点链接地址分享  更新时间 2025-11-29 08:53:05
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://v2rayunode.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://v2rayunode.github.io/uploads/2025/11/0-20251120.yaml
-- https://v2rayunode.github.io/uploads/2025/11/1-20251120.yaml
-- https://v2rayunode.github.io/uploads/2025/11/2-20251120.yaml
-- https://v2rayunode.github.io/uploads/2025/11/3-20251120.yaml
-- https://v2rayunode.github.io/uploads/2025/11/4-20251120.yaml
+- https://v2rayunode.github.io/uploads/2025/11/0-20251129.yaml
+- https://v2rayunode.github.io/uploads/2025/11/1-20251129.yaml
+- https://v2rayunode.github.io/uploads/2025/11/2-20251129.yaml
+- https://v2rayunode.github.io/uploads/2025/11/3-20251129.yaml
+- https://v2rayunode.github.io/uploads/2025/11/4-20251129.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://v2rayunode.github.io/uploads/2025/11/0-20251120.txt
-- https://v2rayunode.github.io/uploads/2025/11/1-20251120.txt
-- https://v2rayunode.github.io/uploads/2025/11/2-20251120.txt
-- https://v2rayunode.github.io/uploads/2025/11/3-20251120.txt
-- https://v2rayunode.github.io/uploads/2025/11/4-20251120.txt
+- https://v2rayunode.github.io/uploads/2025/11/0-20251129.txt
+- https://v2rayunode.github.io/uploads/2025/11/1-20251129.txt
+- https://v2rayunode.github.io/uploads/2025/11/2-20251129.txt
+- https://v2rayunode.github.io/uploads/2025/11/3-20251129.txt
+- https://v2rayunode.github.io/uploads/2025/11/4-20251129.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://v2rayunode.github.io/uploads/2025/11/20251120.json
+- https://v2rayunode.github.io/uploads/2025/11/20251129.json
 
 ## 更多Clash节点订阅 ：
 
