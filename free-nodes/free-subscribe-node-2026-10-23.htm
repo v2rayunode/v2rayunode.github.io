@@ -157,6 +157,41 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 是否支持 Clash 配置？</h5></div>
+    <div class="panel-body">
+        Surfboard 是一款支持多种协议的客户端应用，它能够兼容 Clash 的配置文件格式，用户只需导入 YAML 文件即可。该应用以轻量、高速著称，常用于 iOS 和 macOS 系统。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的本地 PAC 模式与全局模式有什么区别？</h5></div>
+    <div class="panel-body">
+        PAC 模式通过规则文件自动判定哪些域名走代理，能兼顾速度与便利；全局模式则所有流量都通过代理，适合调试或访问被完全屏蔽的网络。两者可在界面一键切换，根据需求灵活选择。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 是否支持应用分流？</h5></div>
+    <div class="panel-body">
+        支持。Surfboard 可通过策略组和规则文件将不同应用流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow 使用透明代理时如何避免 DNS 泄露？</h5></div>
+    <div class="panel-body">
+        在 Mellow 中启用 fake-ip 或内置 DNS 解析功能，并将上游 DNS 指定为 DoH/DoT 服务，确保所有 DNS 请求通过代理转发而非本地解析，从而避免 ISP 或本地网络捕获实际访问域名。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 节点延迟排序如何提升访问体验？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 会测速节点延迟和丢包率，并优先使用低延迟节点。结合策略组和分流规则，可保证网页、视频和游戏流量通过最优节点，提高访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的混淆方式如何选择最合适？</h5></div>
+    <div class="panel-body">
+        根据网络环境选择适合的混淆方式，如 tls1.2_ticket_auth 模拟 HTTPS 流量，可隐藏真实特征。结合协议插件使用，可以提高抗封锁能力和节点可用性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的配置文件与 Clash 有何区别？</h5></div>
+    <div class="panel-body">
+        Sing-box 的配置使用 JSON 格式，而 Clash 采用 YAML 格式。前者更适合程序自动解析，后者更便于人工编辑。Sing-box 在性能和扩展性上有明显优势，支持更细粒度的流量控制。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 模式适合高并发环境吗？</h5></div>
     <div class="panel-body">
         适合。XTLS 去除冗余加密，提高 CPU 使用效率，降低延迟。结合策略组和多出口节点，可在高并发或多连接场景下保持稳定、高速的网络体验。<hr />    </div>
@@ -167,44 +202,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         多路复用允许多个短连接共享同一通道，减少握手次数和加密开销。适合游戏和即时通讯等高频短连接场景，提高吞吐量和连接稳定性，保证流量快速传输。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 使用透明代理时如何避免 DNS 泄露？</h5></div>
-    <div class="panel-body">
-        在 Mellow 中启用 fake-ip 或内置 DNS 解析功能，并将上游 DNS 指定为 DoH/DoT 服务，确保所有 DNS 请求通过代理转发而非本地解析，从而避免 ISP 或本地网络捕获实际访问域名。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的混淆方式如何选择最合适？</h5></div>
-    <div class="panel-body">
-        根据网络环境选择适合的混淆方式，如 tls1.2_ticket_auth 模拟 HTTPS 流量，可隐藏真实特征。结合协议插件使用，可以提高抗封锁能力和节点可用性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 是否支持应用分流？</h5></div>
-    <div class="panel-body">
-        支持。Surfboard 可通过策略组和规则文件将不同应用流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的配置文件与 Clash 有何区别？</h5></div>
-    <div class="panel-body">
-        Sing-box 的配置使用 JSON 格式，而 Clash 采用 YAML 格式。前者更适合程序自动解析，后者更便于人工编辑。Sing-box 在性能和扩展性上有明显优势，支持更细粒度的流量控制。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 是否支持 Clash 配置？</h5></div>
-    <div class="panel-body">
-        Surfboard 是一款支持多种协议的客户端应用，它能够兼容 Clash 的配置文件格式，用户只需导入 YAML 文件即可。该应用以轻量、高速著称，常用于 iOS 和 macOS 系统。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 如何结合节点测速优化策略组？</h5></div>
     <div class="panel-body">
-        PassWall2 会定期测速节点延迟和丢包率，并根据策略组自动选择最优节点。通过测速和自动切换，可保证网页、视频和游戏流量走低延迟节点，提升整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 节点延迟排序如何提升访问体验？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 会测速节点延迟和丢包率，并优先使用低延迟节点。结合策略组和分流规则，可保证网页、视频和游戏流量通过最优节点，提高访问速度和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的本地 PAC 模式与全局模式有什么区别？</h5></div>
-    <div class="panel-body">
-        PAC 模式通过规则文件自动判定哪些域名走代理，能兼顾速度与便利；全局模式则所有流量都通过代理，适合调试或访问被完全屏蔽的网络。两者可在界面一键切换，根据需求灵活选择。    </div>
+        PassWall2 会定期测速节点延迟和丢包率，并根据策略组自动选择最优节点。通过测速和自动切换，可保证网页、视频和游戏流量走低延迟节点，提升整体网络体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -234,11 +234,11 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <div class="row">
             <div class="text-center">
-                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
+                <a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
                     <img src="/assets/website/img/G/xingchen.webp" class="avatar" alt="星辰机场">
                 </a>
                 <dl>
-                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
                     <dd>
                         <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p>                    </dd>
                 </dl>
@@ -252,16 +252,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-9-8-node-share.htm" title="9月8日每日最新机场订阅→19.5M/S|免费节点Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点/V2ray节点链接地址分享">9月8日每日最新机场订阅→19.5M/S|免费节点Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点/V2ray节点链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-28-free-clash.htm" title="9月28日每日最新机场订阅→20.8M/S|免费节点Clash节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/V2ray节点链接地址分享">9月28日每日最新机场订阅→20.8M/S|免费节点Clash节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/V2ray节点链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-4-node-share.htm" title="10月4日每日最新机场订阅→22.9M/S|免费节点V2ray节点/SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点链接地址分享">10月4日每日最新机场订阅→22.9M/S|免费节点V2ray节点/SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-14-free-node-subscribe.htm" title="9月14日每日最新机场订阅→18.5M/S|免费节点V2ray节点/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点链接地址分享">9月14日每日最新机场订阅→18.5M/S|免费节点V2ray节点/Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-18-clash-node-daily-updates.htm" title="10月18日每日最新机场订阅→18.8M/S|免费节点Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/SSR节点链接地址分享">10月18日每日最新机场订阅→18.8M/S|免费节点Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/SSR节点链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-10-31.htm" title="10月31日每日最新机场订阅→18.6M/S|免费节点Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点链接地址分享">10月31日每日最新机场订阅→18.6M/S|免费节点Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点链接地址分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-18-clash-node-daily-updates.htm" title="9月18日每日最新机场订阅→21.2M/S|免费节点Clash节点/Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点链接地址分享">9月18日每日最新机场订阅→21.2M/S|免费节点Clash节点/Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-clash-subscribe-2026-9-19.htm" title="9月19日每日最新机场订阅→19M/S|免费节点Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点链接地址分享">9月19日每日最新机场订阅→19M/S|免费节点Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-10-15.htm" title="10月15日每日最新机场订阅→21.8M/S|免费节点V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/SSR节点链接地址分享">10月15日每日最新机场订阅→21.8M/S|免费节点V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/SSR节点链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-24-free-ssr-subscribe.htm" title="9月24日每日最新机场订阅→18.7M/S|免费节点SSR节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点链接地址分享">9月24日每日最新机场订阅→18.7M/S|免费节点SSR节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-10-free-ssr-subscribe.htm" title="10月10日每日最新机场订阅→20.4M/S|免费节点Trojan节点/V2ray节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点链接地址分享">10月10日每日最新机场订阅→20.4M/S|免费节点Trojan节点/V2ray节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-9-23.htm" title="9月23日每日最新机场订阅→19.1M/S|免费节点Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点链接地址分享">9月23日每日最新机场订阅→19.1M/S|免费节点Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Singbox节点链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-29.htm" title="9月29日每日最新机场订阅→23M/S|免费节点Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点链接地址分享">9月29日每日最新机场订阅→23M/S|免费节点Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-clash-v2ray-ss-ssr.htm" title="9月2日每日最新机场订阅→18.3M/S|免费节点Trojan节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点链接地址分享">9月2日每日最新机场订阅→18.3M/S|免费节点Trojan节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-node-subscribe.htm" title="9月4日每日最新机场订阅→23M/S|免费节点Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点链接地址分享">9月4日每日最新机场订阅→23M/S|免费节点Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Trojan节点链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-27.htm" title="9月27日每日最新机场订阅→20.7M/S|免费节点Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点链接地址分享">9月27日每日最新机场订阅→20.7M/S|免费节点Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-22-clash-v2ray-ss-ssr.htm" title="10月22日每日最新机场订阅→22.9M/S|免费节点V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点链接地址分享">10月22日每日最新机场订阅→22.9M/S|免费节点V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-10-11.htm" title="10月11日每日最新机场订阅→21.3M/S|免费节点SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点链接地址分享">10月11日每日最新机场订阅→21.3M/S|免费节点SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-30-free-clash.htm" title="9月30日每日最新机场订阅→19.8M/S|免费节点Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点链接地址分享">9月30日每日最新机场订阅→19.8M/S|免费节点Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点链接地址分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -273,7 +273,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
@@ -301,7 +304,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
                                 <p>
                 <a href="/">V2rayU Node免费梯子节点分享官网</a> 版权所有 Powered by WordPress
             </p>
